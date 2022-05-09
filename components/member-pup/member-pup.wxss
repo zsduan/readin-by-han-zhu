@@ -1,0 +1,47 @@
+.member-pup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.member-pup .imgwrop {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.member-pup .imgwrops {
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+
+.member-pup .close {
+  width: 50rpx;
+  height: 80rpx;
+  position: absolute;
+  z-index: 10;
+}
+
+.member-pup .close .img {
+  width: 54rpx;
+  height: 90rpx;
+}
+
+.tips{
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.tips .check{
+  transform: scale(0.6);
+}

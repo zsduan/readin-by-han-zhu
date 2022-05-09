@@ -1,0 +1,117 @@
+.report-wrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.3); */
+    z-index: 10;
+}
+
+.report-wrop .pup {
+    background: #fff;
+    padding: 0 40rpx;
+    position: absolute; 
+    bottom: 0;
+    width: calc(100% - 80rpx);
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.report-wrop .pup .item {
+    padding: 30rpx 40rpx;
+    display: flex;
+    align-items: center;
+}
+
+.report-wrop .pup .item .img {
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.report-wrop .pup .item .text {
+    display: inline-block;
+    padding-left: 10rpx;
+}
+
+.report-wrop .pup .line {
+    width: 100%;
+    height: 20rpx;
+    background: #F9F9F9;
+}
+
+.report-wrop .cancel {
+    height: 87rpx;
+    line-height: 98rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #333333;
+}
+
+
+.report-wrop .pup-report .title {
+    width: 630rpx;
+    padding-top: 30rpx;
+    font-size: 30rpx;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.report-wrop .pup-report .list {
+    padding-top: 25rpx;
+}
+
+.report-wrop .pup-report .item {
+    padding: 25rpx 60rpx;
+
+}
+
+.report-wrop .pup-report .item .radio {
+    transform: scale(0.7);
+}
+
+.report-wrop .pup-report .item .title {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.report-wrop .pup-report .textarea{
+    width: 510rpx;
+    height: 200rpx;
+    background: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 10rpx;
+    margin: 0 60rpx;
+}
+
+.report-wrop .pup-report .textarea .textareas{
+    width: 100%;
+    height: 100%;
+    padding:20rpx;
+}
+
+.report-wrop .bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: #E5E5E5 1px solid;
+    margin-top: 49rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.report-wrop .bottom .btn {
+    width: 50%;
+    text-align: center;
+}
+
+.report-wrop .bottom .cancel {
+    border-right: #E5E5E5 1px solid;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.report-wrop .bottom .determine {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #FE7221;
+}

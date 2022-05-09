@@ -1,0 +1,28 @@
+<view class="bottom-wrop" bindtap="goDetails" wx:if="{{is_show && is_show_prop}}">
+	<view class="bottom-play-wrop {{is_close ? 'bootom-right':''}}" style="top:{{top}}px;left:{{left}}px">
+	<view class="left">
+		<view class="great-circle" catchtouchmove="moveCircle" catchtouchend="endMoveCircle">
+			<view class="{{speed > 180 ? 'clip-auto in-circle' : 'in-circle'}}">
+				<view class="percent left" style="transform:rotate({{speed > 180 ? 180 : speed}}deg)"></view>
+				<!-- <checkbox-group></checkbox-group> -->
+				<view class="percent rights" wx:if="{{speed > 180}}" style="transform:rotate({{speed - 180}}deg)"></view>
+			</view>
+			<view class="inside-round">
+				<image src="{{bookDetails.imgSrc}}" class="img {{is_rotation ? 'Rotation' : ''}}"></image>
+			</view>
+		</view>
+	</view>
+	<view class="right" wx:if="{{is_right}}">
+		<view class="right-left">
+			<view class="names">{{bookDetails.name}}</view>
+			<view class="author">{{bookDetails.author}}</view>
+		</view>
+		<view class="line"></view>
+		<view class="right-right" catchtap="close">
+			<view class="imgwrop" >
+				<image src="../../static/img/shrink.png" class="image"></image>
+			</view>
+		</view>
+	</view>
+</view>
+</view>

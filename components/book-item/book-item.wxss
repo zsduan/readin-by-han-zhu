@@ -1,0 +1,143 @@
+.book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20rpx 0;
+    margin-bottom: 30rpx;
+  }
+  
+  .book-item .left {
+    width: 155rpx;
+    height: 223rpx;
+    border-radius: 6rpx;
+    background : url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/05/b169dba0646a8526e79d8b43da3db5d0.png");
+    background-size:100% 100%;
+  }
+  
+  .book-item .left .image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .book-item .right {
+    width: calc(100% - 175rpx);
+  }
+  
+  .book-item .right .name {
+    font-size: 30rpx;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10rpx;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .book-item .right .name .title{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: clac(100% - 60rpx);
+  }
+
+  .book-item .right .name-img .img{
+    width: 38rpx;
+    height: 35rpx;
+  }
+  
+  .book-item .right .author {
+    font-size: 26rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 10rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .book-item .right .details {
+    font-size: 26rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+    overflow: hidden;
+    margin-bottom: 30rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  
+  .book-item .right .read-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .book-item .right .read-time .time {
+    font-size: 22rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+  }
+  
+  .book-item .right .read-time .read{
+    font-size: 22rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+  }
+  
+  .book-item .right .read-time .img{
+    width: 18rpx;
+    height: 18rpx;
+  }
+  
+  .book-item .right .read-time .reading{
+    display: inline-block;
+    padding-left: 10rpx;
+  }
+
+  .book-item .right .circle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.book-item .right .circle .floor {
+  width: 292rpx;
+  height: 14rpx;
+  background: #EFEFEF;
+  border-radius: 27rpx;
+  position: relative;
+}
+
+.book-item .right .circle .top {
+  height: 14rpx;
+  background: linear-gradient(90deg, #F97712 0%, #FF8E0D 100%);
+  border-radius: 27rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.book-item .right .circle .num {
+  font-size: 20rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #ED812B;
+  padding-left: 20rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "exchange-pup" : "/components/exchange-pup/exchange-pup"
+  },
+  "navigationBarTitleText" : "会员vip",
+  "enablePullDownRefresh": true
+}

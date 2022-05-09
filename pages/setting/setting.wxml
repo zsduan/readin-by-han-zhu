@@ -1,0 +1,36 @@
+<view class="page">
+    <view class="list">
+        <view class="line-20"></view>
+        <van-cell title="{{edition_text}}" is-link value="当前{{edition_now_text}}" bindtap="changeEdition" />
+        <view class="item">
+            <view class="title">首页弹窗状态</view>
+            <view>
+                <van-switch checked="{{pup_text == '已开启' ? true : false }}" size="20px" bind:change="openClose" />
+            </view>
+        </view>
+        <van-cell title="视频清晰度" is-link value="{{definition_text}}" bindtap="openEfinition" />
+        <van-cell title="清除缓存" is-link value="清除缓存会丢失部分数据" bindtap="clearStorage" />
+        <view wx:if="{{is_checked}}">
+            <van-cell title= "推送" value="请在小程序设置中关闭"/>
+        </view>
+        <view wx:else>
+            <van-cell title= "推送" value="点击开启推送" bindtap="openPush" />  
+        </view>
+        <van-cell title="版本号" value="2.6.1" bindtap="updata" />
+        <view class="line-20"></view>
+        <van-cell title="用户协议" is-link bindtap="goService" />
+    </view>
+    <view class="definition">
+        <van-popup show="{{ show_pup }}" round bind:close="closePup" closeable>
+            <view class="title">请选择清晰度</view>
+            <view class="pup-list">
+                <view class="list-item" data-index="{{index}}" wx:for="{{definitionList}}" wx:key="index"
+                    bindtap="changedEfinition">
+                    <view class="text">{{item.name}}</view>
+                    <radio color="#F16E22" checked="{{item.active}}" class="radio">
+                    </radio>
+                </view>
+            </view>
+        </van-popup>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "buy-curriculum" : "/components/buy-curriculum/buy-curriculum",
+    "exchange-pup" : "/components/exchange-pup/exchange-pup",
+    "top-notice" : "/components/top-notice/top-notice"
+  },
+  "navigationBarTitleText" : "课程详情",
+  "enablePullDownRefresh": true
+}

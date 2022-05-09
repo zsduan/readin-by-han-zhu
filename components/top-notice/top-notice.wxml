@@ -1,0 +1,20 @@
+<view class="page" wx:if="{{is_show}}">
+    <view class="top-tips">
+        <view class="left">
+            <view class="imgwrop" wx:if="{{show_vip}}">
+                <image src="../../static/img/vip-icon.png" class="vip-img"></image>
+            </view>
+            <view class="imgwrop" wx:if="{{show_notice}}">
+                <image src="../../static/img/notice.png" class="notice-img"></image>
+            </view>
+            <view class="tips">{{tips}}</view>
+        </view>
+        <view class="right">
+            <view class="btn" bindtap="goOpenVip" wx:if="{{!is_ios && show_btn}}">立即开通</view>
+            <view class="btn" bindtap="openExchange" wx:if="{{is_ios && show_btn}}">立即兑换</view>
+            <view class="close" bindtap="closeTips">
+                <image src="../../static/img/close.png" class="img"></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "book-item" : "/components/book-item/book-item",
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText" : "搜索",
+  "enablePullDownRefresh": true
+}

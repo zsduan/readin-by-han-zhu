@@ -1,0 +1,109 @@
+<view class="page">
+    <!-- 头部 -->
+    <view wx:if="{{is_show }}">
+        <view class="header" wx:if="{{0}}">
+            <view class="icon">
+                <image src="{{userInfo.avatar}}"></image>
+            </view>
+            <view class="right">
+                <view class="name">
+                    <text>{{userInfo.nickname}}</text>
+                </view>
+                <view class="tel">
+                    <image src="../../static/img/tel.png"></image>
+                    <text>{{userInfo.mobile}}</text>
+                </view>
+                <view class="address">
+                    <image src="../../static/img/loc.png"></image>
+                    <text>{{userInfo.address}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- nav -->
+        <view class="nav">
+            <view class="item {{item.active ? 'active':''}} {{index == 1 ? 'last-item':''}}" wx:for="{{navList}}"
+                wx:key="index" data-index="{{index}}" bindtap="changeTop">
+                {{item.name}}
+                <view class="line {{index == 1 ? 'last-line' : ''}}" wx:if="{{item.active}}"></view>
+            </view>
+        </view>
+        <!-- 邀请的用户列表 -->
+        <view class="user-list" wx:if="{{invitationList.length}}">
+            <view class="item" wx:for="{{invitationList}}" wx:key="index" data-id="{{item.id}}" bindtap="goNext">
+                <view class="left">
+                    <view class="icon">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="name-time">
+                        <view class="name">{{item.nickname}}</view>
+                        <view class="time">{{item.time}}</view>
+                    </view>
+                </view>
+                <view class="right">
+                    <text>{{item.count}}</text>
+                    <image src="../../static/img/row-right-index.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="empty" wx:if="{{!invitationList.length}}">
+            <image
+                src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/pW9I45TFJTWcUjD4UR4pZrHPPuu7WP.png"
+                mode="widthFix"></image>
+        </view>
+        <!-- 邀请新用户 -->
+        <view class="btns">
+            <button open-type="share">邀请用户</button>
+        </view>
+    </view>
+    
+    <!-- 二级页面 -->
+    <view wx:if="{{!is_show}}">
+        <!-- 头部 -->
+        <view class="headers">
+            <view class="icon">
+                <image src="{{userInfo.avatar}}"></image>
+            </view>
+            <view class="name">
+                <text>{{userInfo.nickname}}</text>
+            </view>
+        </view>
+        <!-- nav -->
+        <view class="navs">
+            <view class="item {{item.active ? 'active':''}} {{index == 1 ? 'last-item':''}}" wx:for="{{navList}}"
+                wx:key="index" data-index="{{index}}" bindtap="changeTop">
+                {{item.name}}
+                <view class="line {{index == 1 ? 'last-line' : ''}}" wx:if="{{item.active}}"></view>
+            </view>
+        </view>
+        <!-- 邀请的用户列表 -->
+        <view class="user-list" wx:if="{{invitationList.length}}">
+            <view class="item" wx:for="{{invitationList}}" wx:key="index" data-id="{{item.id}}" bindtap="goNext">
+                <view class="left">
+                    <view class="icon">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="name-time">
+                        <view class="name">{{item.nickname}}</view>
+                        <view class="time">{{item.time}}</view>
+                    </view>
+                </view>
+                <view class="right">
+                    <text>{{item.count}}</text>
+                    <image src="../../static/img/row-right-index.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="emptys" wx:else>
+            哎呀，他还没有邀请用户
+        </view>
+        <!-- 邀请新用户 -->
+        <view class="btns" wx:if="{{is_bootom_paly}}">
+            <button>邀请用户</button>
+        </view>
+    </view>
+
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

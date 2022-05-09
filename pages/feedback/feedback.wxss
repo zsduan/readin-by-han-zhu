@@ -1,0 +1,42 @@
+.page{
+    padding: 0 40rpx;
+}
+
+.page .textarea{
+    height: 300rpx;
+    border: 1px solid rgba(155, 155, 155, 0.3);
+    border-radius: 20rpx;
+    overflow: hidden;
+    padding: 20rpx;
+}
+
+.page .tips{
+    font-size: 24rpx;
+    color: #999;
+    padding-top: 20rpx;
+}
+
+.btns{
+    width: 550rpx;
+    height: 90rpx;
+    background: #FE7221;
+    border-radius: 45rpx;
+    text-align: center;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 90rpx;
+}
+
+.journal{
+    padding : 40rpx 0;
+}
+
+.journal radio{
+    transform: scale(0.7);
+}
+.journal text{
+    font-size: 28rpx;
+    color: #999;
+}

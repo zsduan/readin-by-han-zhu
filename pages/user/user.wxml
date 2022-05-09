@@ -1,0 +1,131 @@
+<import src="user.skeleton.wxml" />
+<template is="skeleton" wx-if="{{!exclusiveList.length}}" />
+
+<view class="page">
+    <!-- 头部信息 -->
+    <view class="userinfo">
+        <view class="icon" wx:if="{{userInfo.avatar}}">
+            <image src="{{userInfo.avatar}}" bindtap="goUserInfo"></image>
+        </view>
+        <view class="icon" wx:else bindtap="goLogin"> </view>
+        <view class="info">
+            <view class="nikename" wx:if="{{userInfo.salt && userInfo.nickname}}" bindtap="goUserInfo">{{userInfo.nickname}}</view>
+            <view class="nikename" wx:if="{{!userInfo.salt}}" catchtap="goLogin">点击登录</view>
+            <view class="nikename" wx:if="{{!userInfo.nickname && userInfo.salt}}">未获取到昵称</view>
+            <view class="info-bottom">
+                <text class="vip" wx:if="{{userVip.day && userVip.is_free}}">体验VIP还剩<text
+                        class="num">{{userVip.day}}</text>天到期</text>
+                <text class="vip" wx:if="{{userVip.day && !userVip.is_free}}">VIP还剩<text
+                        class="num">{{userVip.day}}</text>天到期</text>
+                <text class="vip" wx:if="{{!userVip.day}}">您还没有开通VIP</text>
+                <text class="renew" wx:if="{{userVip.day}}" bindtap="openVip">VIP续期</text>
+                <text class="renew" wx:else bindtap="openVip">VIP开通</text>
+            </view>
+        </view>
+        <view class="sign" bindtap="goSign" wx:if="{{!userInfo.is_sign}}">
+            <image src="../../static/img/sign-user.png"></image>
+            <text>签到</text>
+        </view>
+        <view class="sign" bindtap="goSign" wx:else>
+            <text>已签到</text>
+        </view>
+    </view>
+    <!-- 收益和积分 -->
+    <view class="profitAndIntegral" wx:if="{{userInfo.salt}}">
+        <view class="item" bindtap="goProfit">
+            <view class="num">{{userInfo.balance}}</view>
+            <view>收益</view>
+        </view>
+        <view class="item" bindtap="goSign">
+            <view class="num">{{userInfo.integral}}</view>
+            <view>学分</view>
+        </view>
+    </view>
+    <!-- 开通vip -->
+    <view class="open-vip" bindtap="openVip">
+        <view class="back" wx:if="{{!userVip.day && !userInfo.mobile}}">
+            开通VIP，领取专属权益
+        </view>
+        <view class="back" wx:if="{{!userVip.day && userInfo.mobile}}">快！点我领取7天免费VIP</view>
+        <view class="back" wx:if="{{userVip.day}}">{{userVip.endtime}}到期，点我续费</view>
+    </view>
+    <!-- 专属服务 -->
+    <view class="exclusive" wx:if="{{exclusiveList.length}}">
+        <view class="title">专属服务</view>
+        <view class="list">
+            <view class="item" wx:for="{{exclusiveList}}" wx:key="index" data-index="{{index}}" bindtap="exclusive">
+                <view class="imgwrop">
+                    <image src="{{imgSrc}}{{item.thumb}}"></image>
+                </view>
+                <view class="name">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 历史学习 -->
+    <view class="history-list">
+        <history historyList="{{historyList}}" fontSize="{{true}}"></history>
+    </view>
+    <!-- 我的服务 -->
+    <view class="exclusive" wx:if="{{myService.length}}">
+        <view class="title">我的服务</view>
+        <view class="list">
+            <view class="item" wx:for="{{myService}}" wx:key="index" data-index="{{index}}" bindtap="myServiceClick">
+                <view class="imgwrop">
+                    <image src="{{imgSrc}}{{item.thumb}}"></image>
+                </view>
+                <view class="name">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+    <!-- 兑换弹窗 -->
+    <van-popup show="{{is_exchange}}" class="pup-wrop" custom-style="border-radius: 10px;">
+        <view class="pup">
+            <view class="title">会员兑换</view>
+            <view class="content">
+                <input type="text" placeholder="请输入会员兑换码" bindinput="bindKeyInput" />
+            </view>
+            <view class="bottom">
+                <view class="cancel" bindtap="cancel">取消</view>
+                <view class="determine" bindtap="determine">确定</view>
+            </view>
+        </view>
+    </van-popup>
+
+    <!-- <view class="pup-wrop" wx:if="{{is_exchange}}">
+        <view class="pup">
+            <view class="title">会员兑换</view>
+            <view class="content">
+                <input type="text" placeholder="请输入会员兑换码" bindinput="bindKeyInput"/>
+            </view>
+            <view class="bottom">
+                <view class="cancel" bindtap="cancel">取消</view>
+                <view class="determine" bindtap="determine">确定</view>
+            </view>
+        </view>
+    </view> -->
+
+    <!-- 客服弹窗 -->
+    <!-- <view class="pup-wrop" wx:if="{{is_service}}"> -->
+    <van-popup show="{{is_service}}" class="pup-wrop" custom-style="border-radius: 10px;">
+        <view class="pup pup-serve">
+            <view class="title">联系客服</view>
+            <view class="contents">
+                因微信客服比较缓慢，建议直接拨打电话{{phoneNumber}}，您也可以点击联系客服。
+            </view>
+            <view class="bottoms">
+                <view class="btns">
+                    <button bindtap="callPhone">拨打电话</button>
+                </view>
+                <view class="btns">
+                    <button open-type="contact">微信客服</button>
+                </view>
+                <view class="btns" bindtap="cancelService">取消</view>
+            </view>
+        </view>
+    </van-popup>
+    <!-- </view> -->
+</view>

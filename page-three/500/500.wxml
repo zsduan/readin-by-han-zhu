@@ -1,0 +1,6 @@
+<view class="page">
+    <view class="wrop" bindtap="goHome">
+        <image src="../static/img/500.png"></image>
+        <view class="btn" >返回首页</view>
+    </view>
+</view>

@@ -1,0 +1,214 @@
+<view class="page">
+    <!-- 顶部通告 -->
+    <view class="top-tips" wx:if="{{is_show_top && !is_vip}}">
+        <top-notice tips="{{top_tips_2}}" show_vip="{{true}}" show_btn="{{true}}" pageUrls="{{pageUrls}}"
+            bindopenExchange="openExchange"></top-notice>
+    </view>
+    <!-- 顶部播放 -->
+    <view class="top-wrop" wx:if="{{is_show_top}}">
+        <!-- 顶部Nav -->
+        <view class="nav">
+            <view data-index="{{index}}" class="item {{item.active ? 'active':''}}" wx:for="{{navList}}" wx:key="index"
+                bindtap="chnageBanner">
+                <view>{{item.name}}</view>
+                <view class="line" wx:if="{{item.active}}"></view>
+            </view>
+        </view>
+        <!-- 音乐视频播放器 -->
+        <view class="content">
+            <!-- 为购买显示 -->
+            <view class="content-top" wx:if="{{!is_buy && is_curriculum}}">
+                <view class="top-tips-wrop">
+                    <view class="top-tips">本集为付费内容</view>
+                    <view class="top-tips">{{top_tips}}</view>
+                </view>
+                <view class="btn-wrop">
+                    <view class="btn-share btns">
+                        <button open-type="share" class="btn">去分享</button>
+                    </view>
+                    <view class="btn btn-share">去分享</view>
+                    <view class="btn btn-buy" bindtap="openbuy" wx:if="{{!is_ios}}">去购买</view>
+                    <view class="btn btn-buy" bindtap="openExchange" wx:else>立即兑换</view>
+                </view>
+            </view>
+            <swiper class="music-video {{is_video ? 'music-video-active' : ''}}" bindchange="chnageBanner"
+                current="{{current}}">
+                <swiper-item>
+                    <view class="music">
+                        <!-- 音频播放 -->
+                        <view class="center-wrop" wx:if="{{!is_curriculum}}">
+                            <view class="music-center {{is_play ? 'Rotation music-center-active' : ''}}"
+                                wx:if="{{topList.thumb}}" style="background-image : url({{imgSrc}}{{topList.thumb}});">
+                                <view class="play" bindtap="playAudio" wx:if="{{!is_play}}">
+                                    <image src="../../static/img/paly.png"></image>
+                                </view>
+                                <view class="play" wx:else bindtap="pauseAudio">
+                                    <image src="../../static/img/suspend-index.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                        <!-- 课程播放 -->
+                        <view class="center-wrop" wx:else>
+                            <view class="music-center-bottom"></view>
+                            <view class="previous">
+                                <image src="../../static/img/next-details.png" wx:if="{{is_previous}}"
+                                    data-go="previous" bindtap="goNxet"></image>
+                                <image src="../../static/img/next-details.png" wx:else data-go="previous"
+                                    bindtap="goNxet" style="opacity:0.5;"></image>
+                            </view>
+                            <view class="next">
+                                <image src="../../static/img/next-details.png" data-go="next" bindtap="goNxet"
+                                    wx:if="{{is_next}}"></image>
+                                <image src="../../static/img/next-details.png" wx:else data-go="next" bindtap="goNxet"
+                                    style="opacity:0.5;"></image>
+                            </view>
+                            <view
+                                class="music-center music-center-curriculum {{is_play ? 'Rotation music-center-curriculum-active' : ''}}"
+                                wx:if="{{topList.thumb}}"
+                                style="background-image : url({{imgSrc}}{{topList.thumb}});width:220rpx">
+                                <view class="play" bindtap="playAudio" wx:if="{{!is_play}}">
+                                    <image src="../../static/img/paly.png"></image>
+                                </view>
+                                <view class="play" wx:else bindtap="pauseAudio">
+                                    <image src="../../static/img/suspend-index.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="current_time" wx:if="{{is_slider}}">{{slider_time}}</view>
+                    </view>
+                </swiper-item>
+                <swiper-item>
+                    <!-- 视频播放器 -->
+                    <view class="video" id="myVideo" wx:if="{{is_video}}">
+                        <video src="{{topList.video}}" id="myVideo" bindtimeupdate="timeupdate" bindplay="palyVideo"
+                            bindpause="pauseVideo" play-btn-position="center" enable-play-gesture="{{true}}"
+                            title="{{topList.title}}" autoplay="{{is_play_video}}" bindended="endVideo"
+                            bindwaiting="waitingVideo" bindfullscreenchange="screenchange" bindcontrolstoggle="controlsShow">
+                            <view class="video-tips {{is_screen ? 'video-tips-show' : ''}}"
+                                bindtap="closeWaitingVideo" wx:if="{{show_video_set}}">
+                                <view class="tips">切换清晰度保证正常播放，</view>
+                                <view class="change" bindtap="goSet">去切换</view>
+                                <view class="imgwrop">
+                                    <image src="../../static/img/close-video.png" class="img"></image>
+                                </view>
+                            </view>
+                            <view class="video-multiple" wx:if="{{is_controls && 0}}">
+                                <view class="multiple-list" wx:if="{{is_show_multiple}}">
+                                    <view wx:for="{{multipleList}}" wx:key="index"
+                                        class="item {{item.active ? 'active' : ''}}" data-index="{{index}}"
+                                        bindtap="changeMultiple">
+                                        <view>{{item.show_multiple}}</view>
+                                    </view>
+                                </view>
+                                <view bindtap="openMultiple" class="title">倍速</view>
+                            </view>
+                        </video>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <!-- 音乐播放条 -->
+        <view class="progress" wx:if="{{!is_video}}">
+            <view class="progress-line">
+                <slider min="0" max="100" backgroundColor="#F1F1F1" activeColor="#FC9356" class="slider slider-tiyan"
+                    block-size="12" block-color="#FC9356" value="{{pro_width}}" bindchange="sliderChange"
+                    disabled="{{is_disabled}}">
+                </slider>
+                <!-- <slider min="0" max="100" backgroundColor="#F1F1F1" activeColor="#FC9356" class="slider" block-size="12"
+                    block-color="#FC9356" value="{{pro_width}}" bindchange="sliderChange" disabled="{{is_disabled}}">
+                </slider> -->
+                <!-- 顶层播放条 -->
+                <view class="progress-line-top" wx:if="{{!is_video }}">
+                    <slider min="0" max="100" backgroundColor="#F1F1F1" activeColor="#FC9356" block-size="12"
+                        block-color="#FC9356" value="{{pro_width}}" class="slider" bindchanging="sliderChangeing"
+                        bindchange="sliderChangeEnd" disabled="{{is_disabled}}"></slider>
+                </view>
+            </view>
+            <view class="time-wrop">
+                <text>{{current_time}}/{{all_time}}</text>
+            </view>
+            <view class="multiple">
+                <view class="multiple-list" wx:if="{{is_show_multiple}}">
+                    <view wx:for="{{multipleList}}" wx:key="index" class="item {{item.active ? 'active' : ''}}"
+                        data-index="{{index}}" bindtap="changeMultiple">
+                        <text>{{item.show_multiple}}</text>
+                    </view>
+                </view>
+                <view class="title" bindtap="openMultiple">{{controls_text}}</view>
+            </view>
+        </view>
+
+    </view>
+    <!-- 底部Nav -->
+    <view class="bottom-nav {{is_fixed ? 'bottom-nav-active' : ''}}">
+        <view data-index="{{index}}" class="item {{item.active ? 'active':''}}" wx:for="{{bottomList}}" wx:key="index"
+            bindtap="changeBottom">
+            {{item.name}}
+        </view>
+    </view>
+    <!-- 简介 -->
+    <view class="brief {{is_fixed ? 'fiexd-active' : ''}}" wx:if="{{!is_comment}}">
+        <!-- 书籍信息 -->
+        <block wx:if="{{topList.id}}">
+            <!-- 书籍详情顶部 -->
+            <book-info-top bookDetails="{{topList}}" episodes="{{episodes}}"></book-info-top>
+            <!-- 课程选集 -->
+            <block wx:if="{{is_curriculum}}">
+                <curriculum-details curriculumList="{{curriculumList}}" all_price="{{all_price}}" bindopenPup="openPup"
+                    is_pay_vip="{{is_vip}}" scroll_left="{{scroll_left}}" curriculum_id="{{curriculum_id}}"
+                    bindgoNextCom="goNextCom" pageUrls="{{pageUrls}}"></curriculum-details>
+            </block>
+            <!-- 书籍简介 -->
+            <book-introduce bookDetails="{{topList}}" episodes="{{episodes}}"></book-introduce>
+        </block>
+        <!-- 分割线 -->
+        <view class="lines">
+            <view class="line-20"></view>
+        </view>
+        <!-- 更多推荐 -->
+        <view class="more-recommend">
+            <view class="title">
+                <text>{{title}}</text>
+            </view>
+            <book-item bookList="{{bookList}}" time="{{true}}" is_book_details="{{true}}"
+                is_curriculum="{{is_curriculum}}"></book-item>
+        </view>
+    </view>
+    <!-- 评论 -->
+    <block wx:else>
+        <view class="{{is_fixed ? 'fiexd-active' : ''}}">
+            <comment-item commentList="{{commentList}}" book_id="{{book_id}}" is_show_top="{{is_show_top}}"
+                bindreportId="getReportId" report_user_id="{{comment_user_id}}"></comment-item>
+        </view>
+    </block>
+
+    <!-- 发表评论 -->
+    <view class="publish" wx:if="{{is_comment}}">
+        <view class="wrop" bindtap="goComment">
+            <view class="ipt">
+                <input type="text" adjust-position="{{false}}" focus="{{is_focus}}" maxlength="-1" disabled
+                    placeholder="谈谈你对这本的感受吧~" />
+            </view>
+            <view class="btn" bindtap="send">评论</view>
+        </view>
+    </view>
+    <!-- 举报、编辑、删除弹窗 -->
+    <block>
+        <report report_id="{{report_id}}" is_pup="{{is_pup}}" book_id="{{book_id}}" report_user_id="{{comment_user_id}}"
+            binddelOk="delOk"></report>
+    </block>
+    <!-- 购买弹窗 -->
+    <block>
+        <buy-curriculum show="{{show_buy}}" curriculum="{{curriculumList_2}}" title="{{topList.p_title}}"
+            total_price="{{all_price}}" curriculum_id="{{curriculum_id}}" pageUrls="{{pageUrls}}"></buy-curriculum>
+    </block>
+    <!-- 底部播放 -->
+    <block>
+        <paly-bottom is_show_prop="{{false}}" bindonPauseMuisic="onPauseMuisic" bindonStopMusic="onStopMusic"
+            bindbgMusicErr="onErrMusic" bindonEndedMusic="onEndedMusic" bindonPalyMusic="onPalyMusic"></paly-bottom>
+    </block>
+    <!-- 会员兑换 -->
+    <block>
+        <exchange-pup is_exchange="{{is_exchange}}"></exchange-pup>
+    </block>
+</view>

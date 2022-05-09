@@ -1,0 +1,15 @@
+<!-- 首页会员弹窗 -->
+<view class="member-pup" wx:if="{{is_show}}">
+    <view class="imgwrop" >
+        <view class="imgwrops" style="height : {{pupData.height}}rpx;" bindtap="goNav">
+            <image src="{{pupData.img}}" mode="widthFix" style="width:{{pupData.width}}rpx" bindload="imgLoade"></image>
+        </view>
+        <view class="close" bindtap="close" style="top : {{pupData.y_axis}}rpx;left:{{pupData.x_axis}}rpx;">
+            <image src="{{imgSrc}}{{pupData.close}}" class="img"></image>
+        </view>
+    </view>
+    <view class="tips">
+        <checkbox class="check" data-checked="{{today}}" bindtap="todayshow"></checkbox>
+        <text >今日不在显示</text>
+    </view>
+</view>

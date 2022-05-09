@@ -1,0 +1,39 @@
+<view class="page">
+    <!-- 购买 -->
+    <view class="buy" bindtap="openPup" wx:if="{{is_pay_vip != 1 && !is_ios}}">
+        <image src="../../static/img/buy-curriculum-index.png" class="img"></image>
+        <view class="all-price-wrop"><text class="all-price">{{all_price}}</text>元购买，随心畅听</view>
+    </view>
+    <view class="buy" bindtap="exchange" wx:if="{{is_pay_vip != 1 && is_ios}}">
+        <image src="../../static/img/bexchange-curriculum-index.png" class="img"></image>
+        <view class="all-price-wrop">会员用户，免费畅听全集</view>
+    </view>
+    
+    <!-- 标题 -->
+    <view class="title-wrop">
+        <view class="title">课程选集</view>
+        <view class="right">课程共{{curriculumList.length}}集</view>
+    </view>
+    <!-- 列表数据 -->
+    <view class="list-wrop">
+        <scroll-view scroll-x="true" class="list" scroll-left="{{scroll_left}}">
+            <view class="item {{item.active ? 'item-active' : ''}}" wx:for="{{curriculumList}}" wx:key="index" data-id="{{item.id}}" bindtap="changeNav">
+                <view class="title">第{{index + 1}}集</view>
+                <view class="share" wx:if="{{item.type == 1}}">{{item.share_user}}/3</view>
+                <view class="share" wx:else></view>
+                <view class="name">{{item.title}}</view>
+                <view class="tips" wx:if="{{item.type == 1 }}">付费</view>
+                <view class="tips" wx:if="{{item.type == 0 }}">免费</view>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 提示 -->
+    <view class="tips-wrop">
+        <view>{{tips}}</view>
+        <view class="btn" wx:if="{{is_show_login}}" bindtap="goLogin">立即登录</view>
+    </view>
+    <!-- 会员兑换 -->
+    <block>
+        <exchange-pup is_exchange="{{is_exchange}}"></exchange-pup>
+    </block>
+</view>

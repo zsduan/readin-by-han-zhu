@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "book-item" : "/components/book-item/book-item"
+  },
+  "navigationBarTitleText": "韩朱读书",
+  "enablePullDownRefresh": true
+}

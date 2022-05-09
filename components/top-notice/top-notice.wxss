@@ -1,0 +1,54 @@
+.top-tips {
+    background: #FFE0CE;
+    padding: 10rpx 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 750rpx;
+}
+
+.top-tips .left .imgwrop {
+    height: 33rpx;
+    padding-right: 8rpx;
+}
+
+.top-tips .left .imgwrop .vip-img {
+    width: 66rpx;
+    height: 33rpx;
+}
+
+.top-tips .left .imgwrop .notice-img {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.top-tips .left {
+    display: flex;
+    padding-left: 40rpx;
+    align-items: center;
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.top-tips .right {
+    display: flex;
+    align-items: center;
+    padding-right: 40rpx;
+}
+
+.top-tips .right .btn {
+    width: 151rpx;
+    height: 38rpx;
+    border: 1rpx solid #FE7221;
+    border-radius: 19rpx;
+    text-align: center;
+    line-height: 38rpx;
+    font-size: 24rpx;
+    color: #FE7221;
+    margin-right: 20rpx;
+}
+
+.top-tips .right .close .img {
+    width: 22rpx;
+    height: 22rpx;
+}

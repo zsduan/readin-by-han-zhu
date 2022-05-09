@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "book-item" : "/components/book-item/book-item",
+    "report" : "/components/report/report",
+    "comment-item" : "/components/comment-item/comment-item",
+    "buy-curriculum" : "/components/buy-curriculum/buy-curriculum",
+    "exchange-pup" : "/components/exchange-pup/exchange-pup",
+    "book-info-top" : "/components/book-info-top/book-info-top",
+    "book-introduce" : "/components/book-introduce/book-introduce",
+    "curriculum-details" : "/components/curriculum-details/curriculum-details",
+    "top-notice" : "/components/top-notice/top-notice"
+  },
+  "navigationBarTitleText" : "书籍详情",
+  "enablePullDownRefresh": true
+}

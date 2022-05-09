@@ -1,0 +1,66 @@
+<view class="page" style="height:{{pageHeight}}px">
+  <view class="header"></view>
+
+  <view class="content">
+      <!-- 用户头像 -->
+  <view class="headPhoto">
+      <view>
+        <image src="{{userInfo.avatar}}" bindtap="viewPicture" ></image>
+      </view>
+  </view>
+    <!-- 用户名 -->
+    <view class="userName">
+      {{userInfo.nickname}}
+    </view>
+    <!-- 地址 -->
+    <view class="address">
+      <image src="../../static/img/address-icon.png"></image>
+      <text>{{userInfo.address}}</text>
+    </view>
+    <!-- 阅读量和排名 -->
+    <view class="main" bindtap="goShareImg">
+      <view class="list">
+        <view class="item">
+          <view class="val">{{userInfo.total_reading}}</view>
+          <text>总阅读量</text>
+        </view>
+        <view class="item">
+          <view class="vals" wx:if="{{ranking_time.ranking < 31}}">{{ranking_time.ranking}}</view>
+          <view class="vals" wx:else>30+</view>
+          <text>本周排名</text>
+        </view>
+        <view class="item">
+          <view class="val">{{userInfo.total_like}}</view>
+          <text>收到的赞</text>
+        </view>
+      </view>
+    </view>
+    <!-- 分割线 -->
+    <view class="line"></view>
+
+    <block>
+      <!-- 历史学习 -->
+      <view class="histroy-study" wx:if="{{bookList.length != 0}}">
+        <view class="title">
+          <view class="left">最近学习</view>
+          <view class="right" wx:if="{{is_time}}">本周阅读时长：
+            <text class="right-time">{{ranking_time.hour}}:{{ranking_time.minute}}:{{ranking_time.second}}</text>
+          </view>
+        </view>
+        <book-item bookList="{{bookList}}" speed="{{true}}"></book-item>
+        <block>
+         <view class="ends" wx:if="{{is_bookList}}">亲，没有更多的数据了~</view>
+         <view class="ends" wx:else>下拉加载更多哟~</view>
+        </block>
+        
+      </view>
+      <view class="pageEnd" wx:else>
+        他还没有看书哟~
+      </view>
+    </block>
+  </view>
+  <!-- 底部播放 -->
+  <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

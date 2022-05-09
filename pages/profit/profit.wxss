@@ -1,0 +1,148 @@
+page {
+    background: #F6F6F6;
+}
+
+.page {
+    padding: 0 40rpx;
+}
+
+.header {
+    height: 297rpx;
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/HraX8una99n95MX9a09vRNffwXR8O4.png");
+    position: relative;
+    padding: 30rpx 35rpx;
+    margin-top: 30rpx;
+    background-size: 100% 100%;
+}
+
+.header .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .top .money {
+    font-size: 55rpx;
+    color: #FFFFFF;
+}
+
+.header .top .money .name {
+    font-size: 29rpx;
+    color: #FFFFFF;
+    padding-left: 10rpx;
+}
+
+.header .top .reflect {
+    width: 176rpx;
+    height: 54rpx;
+    background: #FFFFFF;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 54rpx;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.header .bottom {
+    padding-top: 95rpx;
+    font-size: 26rpx;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .bottom image {
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.my-profit {
+    background: #FFFFFF;
+    border: 1px solid #eee;
+    border-bottom: 0;
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+}
+
+.nav {
+    /* width: 100%; */
+    height: 90rpx;
+    line-height: 90rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 0 60rpx;
+}
+
+.nav .item {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    font-size: 30rpx;
+    color: #666;
+}
+
+.nav .item .line {
+    width: 30rpx;
+    height: 8rpx;
+    background: #F16E22;
+    border-radius: 7rpx;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav .active {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.my-profit .list .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx 60rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.my-profit .list .item .title {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.my-profit .list .item .time {
+    font-size: 24rpx;
+    color: #999999;
+    padding-top: 16rpx;
+}
+
+.my-profit .list .item .up {
+    font-size: 30rpx;
+    color: #F16E22;
+}
+
+.my-profit .list .item .down {
+    font-size: 30rpx;
+    color: #078413;
+}
+
+.empty{
+    width: 441rpx;
+    margin: 0 auto;
+    margin-top: 80rpx;
+}
+.empty image{
+    width: 414rpx;
+}
+
+.header .bottom .left {
+    font-size: 26rpx;
+    color: #FFFFFF;
+    border-bottom:solid 1px ;
+    margin-left: 10rpx;
+}
+.header .bottom .right {
+    font-size: 26rpx;
+    color: #FFFFFF;
+}

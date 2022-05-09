@@ -1,0 +1,175 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/28 上午9:55:03
+使用方法：
+在 D:\韩朱读书 -- 原生小程序\pages\user\user.wxml 引入模板
+
+```
+<import src="user.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\韩朱读书 -- 原生小程序\pages\user\user.wxss 中引入样式
+```
+@import "./user.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="page">
+      <view class="userinfo">
+        <view class="icon sk-image">
+          <image class="sk-image"></image>
+        </view>
+        <view class="info">
+          <view class="nikename sk-transparent sk-text-14-2857-75 sk-text">有你</view>
+          <view class="info-bottom">
+            <text class="vip sk-transparent">体验VIP还剩<text class="num sk-transparent sk-text-14-2857-242 sk-text">4014</text>天到期</text>
+            <text class="renew sk-transparent sk-text-25-0000-622 sk-text" style="border: none; background-position-x: 50%;">VIP续期</text>
+          </view>
+        </view>
+        <view class="sign">
+          <text class="sk-transparent sk-text-14-2857-487 sk-text">已签到</text>
+        </view>
+      </view>
+      <view class="profitAndIntegral">
+        <view class="item">
+          <view class="num sk-transparent sk-text-14-2857-67 sk-text" style="background-position-x: 50%;">0.00</view>
+          <view class="sk-transparent sk-text-14-2857-474 sk-text" style="background-position-x: 50%;">收益</view>
+        </view>
+        <view class="item">
+          <view class="num sk-transparent sk-text-14-2857-206 sk-text" style="background-position-x: 50%;">1230</view>
+          <view class="sk-transparent sk-text-14-2857-401 sk-text" style="background-position-x: 50%;">积分</view>
+        </view>
+      </view>
+      <view class="open-vip">
+        <view class="back sk-transparent sk-image">2032.05.23到期，点我续费</view>
+      </view>
+      <view class="exclusive">
+        <view class="title sk-transparent sk-text-14-2857-535 sk-text">专属服务</view>
+        <view class="list">
+          <view class="item" data-index="0">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-379 sk-text" style="background-position-x: 50%;">礼品卡</view>
+          </view>
+          <view class="item" data-index="1">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-40 sk-text" style="background-position-x: 50%;">邀请有礼</view>
+          </view>
+          <view class="item" data-index="2">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-763 sk-text" style="background-position-x: 50%;">我的收益</view>
+          </view>
+          <view class="item" data-index="3">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-813 sk-text" style="background-position-x: 50%;">我的积分</view>
+          </view>
+        </view>
+      </view>
+      <view class="history-list">
+        <view is="components/history/history">
+          <view class="history--history">
+            <view class="history--history-title">
+              <text class="history--name history--name-active sk-transparent sk-text-12-5000-941 sk-text">历史学习</text>
+              <view class="history--more">
+                <text class="sk-transparent sk-text-15-7895-705 sk-text" style="background-position-x: 50%;">更多</text>
+                <image class="history--img sk-image"></image>
+              </view>
+            </view>
+            <view class="history--content">
+              <scroll-view class="history--list" scroll-x="true">
+                <view class="history--item" data-id="53" style="border: none;">
+                  <view class="history--imgwrop history--fl">
+                    <image class="history--img sk-image"></image>
+                  </view>
+                  <view class="history--right history--fr">
+                    <view class="history--name sk-transparent sk-text-14-2857-945 sk-text">干法</view>
+                    <view class="history--details sk-transparent sk-text-15-7895-601 sk-text">稻盛和夫的“工作哲学”，提升心性、磨练灵魂的核心法门。</view>
+                    <view class="history--circle">
+                      <view class="history--floor">
+                        <view class="history--top sk-image" style="width : 67px;"></view>
+                      </view>
+                      <view class="history--num sk-transparent sk-text-10-7143-218 sk-text">57%</view>
+                    </view>
+                  </view>
+                </view>
+                <view class="history--item" data-id="52" style="border: none;">
+                  <view class="history--imgwrop history--fl">
+                    <image class="history--img sk-image"></image>
+                  </view>
+                  <view class="history--right history--fr">
+                    <view class="history--name sk-transparent sk-text-14-2857-243 sk-text">男人来自火星，女人来自金星</view>
+                    <view class="history--details sk-transparent sk-text-15-7895-865 sk-text">一部教你区分男女细致差别、和伴侣相处的“两性圣经”</view>
+                    <view class="history--circle">
+                      <view class="history--floor">
+                        <view class="history--top sk-image" style="width : 89px;"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="exclusive">
+        <view class="title sk-transparent sk-text-14-2857-981 sk-text">我的服务</view>
+        <view class="list">
+          <view class="item" data-index="0">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-336 sk-text" style="background-position-x: 50%;">会员兑换</view>
+          </view>
+          <view class="item" data-index="1">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-820 sk-text" style="background-position-x: 50%;">我的同学</view>
+          </view>
+          <view class="item" data-index="2">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-672 sk-text" style="background-position-x: 50%;">我的收藏</view>
+          </view>
+          <view class="item" data-index="3">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-225 sk-text" style="background-position-x: 50%;">我的订单</view>
+          </view>
+          <view class="item" data-index="4">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+          </view>
+          <view class="item" data-index="5">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+          </view>
+          <view class="item" data-index="6">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+          </view>
+          <view class="item" data-index="7">
+            <view class="imgwrop">
+              <image class="sk-image"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

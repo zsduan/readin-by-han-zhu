@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "paly-bottom" : "/components/paly-bottom/paly-bottom"
+  },
+  "enablePullDownRefresh": true
+}

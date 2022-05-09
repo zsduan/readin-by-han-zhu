@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "paly-bottom" : "/components/paly-bottom/paly-bottom",
+    "book-item" : "/components/book-item/book-item"
+  },
+  "navigationBarTitleText" : "我的收藏"
+}

@@ -1,0 +1,46 @@
+<view class="page">
+    <!-- 最近学习 -->
+    <view class="lately" wx:if="{{latelyList.length}}">
+        <view class="title">最近学习</view>
+        <view class="content">
+            <swiper previous-margin="199rpx" next-margin="199rpx" circular current="3" bindchange="changeBanner">
+                <swiper-item wx:for="{{latelyList}}" wx:key="index" class="swiper-item {{item.active ? 'swiper-active':''}}" data-id="{{item.id}}" bindtap="swiperCilck">
+                    <view class="imgwrop {{item.active ? 'imgwrop-active':''}}">
+                        <image src="{{imgSrc}}{{item.thumb}}" lazy-load></image>
+                        <view class="line">{{item.listening}}人收听</view>
+                    </view>
+                </swiper-item> 
+            </swiper>
+        </view>
+        <view class="bottom">
+            <view class="name" wx:if="{{!latelyList[current].p_title}}">{{latelyList[current].title}}</view>
+            <view class="name" wx:else>{{latelyList[current].p_title}}_第{{latelyList[current].episodes}}集</view>
+            <view class="author">{{latelyList[current].author}}</view>
+            <view class="circle">
+              <view class="floor">
+                <view class="top" style="width : {{latelyList[current].long}};"></view>
+              </view>
+              <view class="num" wx:if="{{latelyList[current].frequency == 0}}">{{latelyList[current].circle}}%</view>
+              <view class="num" wx:else>已学{{latelyList[current].frequency}}遍</view>
+            </view>
+            <view class="details"  wx:if="{{!latelyList[current].p_title}}">{{latelyList[current].intro}}</view>
+            <view class="details" wx:else>
+                {{latelyList[current].title}}。{{latelyList[current].intro}}
+            </view>
+        </view>
+    </view>
+    <!-- 分割线 -->
+    <view class="line-20"></view>
+    <!-- 历史学习 -->
+    <view class="history-study">
+        <view class="title">
+            <text>历史学习</text>
+        </view>
+        <book-item bookList="{{bookList}}" speed="{{true}}" ></book-item>
+    </view>
+    <view class="tips">{{bottom_tips}}</view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

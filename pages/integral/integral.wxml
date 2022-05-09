@@ -1,0 +1,68 @@
+<view class="page">
+    <view class="header clearfix">
+        <view class="top fr" bindtap="integralPup">
+            <image src="../../static/img/tips-integral.png"></image>
+            <text>学分攻略</text>
+        </view>
+        <view class="foolr">
+            <view class="foolr-top">
+                <view class="wrop">
+                    <view class="all">{{my_integral}}</view>
+                    <view class="my-integral">我的学分</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="top">
+            <view class="title">已连续签到<text class="num">{{days}}</text>天</view>
+            <view class="tips">坚持签到，赢取更多学分</view>
+        </view>
+        <!-- 全部 -->
+        <view class="all_day" wx:if="{{is_all}}">
+            <view class="back">{{month}}</view>
+            <view class="item {{item.day == -1 ? 'clear-border':''}} {{item.day <= today ? 'clear-border':''}}" wx:for="{{all_day}}" wx:key="index">
+                <image src="../../static/img/unsigne.png" class="signe" wx:if="{{item.type == -1 && item.day != -1}}"></image>
+                <image src="../../static/img/signed.png" class="signe" wx:if="{{item.type ==1}}"></image>
+                <image src="../../static/img/signe.png" class="signe" wx:if="{{item.type == 0}}" bindtap="setSign"></image>
+                <view class="time" wx:if="{{item.day > today}}">{{item.day}}</view>
+            </view>
+        </view>
+        <!-- 7天 -->
+        <view class="seven" wx:if="{{!is_all}}">
+            <view class="item {{item.day == today && item.type != 1 ? 'large-item':''}} {{item.type != 2 ? 'clear-border':''}} "
+                wx:for="{{all_day}}" wx:key="index" wx:if="{{item.is_show}}">
+                <image src="../../static/img/signed.png" class="signed" wx:if="{{item.type ==1}}">
+                </image>
+                <image src="../../static/img/signe.png" class="signe" wx:if="{{item.type == 0}}" bindtap="setSign">
+                </image>
+                <image src="../../static/img/unsigne.png" class="signed" wx:if="{{item.type == -1}}"></image>
+                <view class="empty" wx:if="{{item.day > today}}">
+                    <view>+{{item.integral}}</view>
+                    <image src="../../static/img/sign-user.png" class="empty-img"></image>
+                </view>
+            </view>
+        </view>
+        <!-- 7天日期 -->
+        <view class="seven-day" wx:if="{{!is_all}}">
+            <view class="day" wx:for="{{all_day}}" wx:if="{{item.is_show}}" wx:key="index">{{month}}.{{item.day}}</view>
+        </view>
+        <view class="row-dwon {{is_all ? 'row-dwon-active' : ''}}" bindtap="openAll">
+            <image src="../../static/img/row-dwon.png"></image>
+        </view>
+    </view>
+
+    <view class="bootom-title">学分明细</view>
+    <view class="list" wx:if="{{integralList.length}}">
+        <view class="item" wx:for="{{integralList}}" wx:key="index">
+            <view class="name">{{item.reason}}</view>
+            <view class="integral" wx:if="{{item.type}}">+{{item.integral}}</view>
+            <view class="integral-dwon" wx:else>+{{item.integral}}</view>
+        </view>
+    </view>
+    <view class="empty" wx:else>暂无学分记录</view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

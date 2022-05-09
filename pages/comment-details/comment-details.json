@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "report" : "/components/report/report",
+    "comment-item" : "/components/comment-item/comment-item"
+  },
+  "navigationBarTitleText" : "评论详情",
+  "enablePullDownRefresh": true
+}

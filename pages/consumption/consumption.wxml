@@ -1,0 +1,37 @@
+<view class="page">
+    <view class="list" >
+        <view class="item" wx:for="{{moenyList}}" wx:key="index" wx:if="{{moenyList.length}}">
+           <view class="title">{{item.name}}</view>
+           <view class="tips">付费金额</view>
+           <view class="price"><text class="icon">￥</text>{{item.price}}</view>
+           <view class="curriculum" wx:if="{{item.curriculum}}">
+                <view class="name">购买选集</view>
+                <view class="curriculum-tips">{{item.curriculum}}</view>
+           </view>
+           <view class="item-item item-first">
+                <view class="name">支付时间</view>
+                <view class="time">{{item.time}}</view>
+           </view>
+           <view class="item-item">
+                <view class="name">支付方式</view>
+                <view class="pay">
+                    <image src="../../static/img/weixin-code.png"></image>
+                    <text>微信支付</text>
+                </view>
+           </view>
+           <view class="item-item">
+                <view class="name">订单号</view>
+                <view class="num">{{item.order_num}}</view>
+           </view>
+        </view>
+        <view class="empty" wx:if="{{!moenyList.length}}">
+            <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/i9C18CR4OAapc1rbifi818R8ZB8m1I.png">
+            </image>
+        </view>
+    </view>
+
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

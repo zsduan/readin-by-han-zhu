@@ -1,0 +1,101 @@
+<view class="page">
+    <!-- 头部 -->
+    <view class="header">
+        <view class="not-empty" wx:if="{{bank_card.bank}}" bindtap="openPup">
+            <view class="title">{{mode}}</view>
+            <view class="right">
+                <view>
+                    <view class="top">
+                        <view class="imgwrop {{!bank_card.id ? 'weixin-icon':''}} {{!bank_card.default_icon ? 'bank-icon' : ''}}">
+                            <image src="{{bank_card.icon}}"></image>
+                        </view>
+                        <view class="text">
+                            <text>{{bank_card.bank}}({{bank_card.num}})</text>
+                        </view>
+                    </view>
+                    <view class="bottom">
+                        {{bank_card.arrival}}
+                    </view>
+                </view>
+                <view class="row-right">
+                    <image src="../../static/img/row-right-index.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="empty" wx:else bindtap="goAddBank">
+            <view class="left">
+                <view class="add">+</view>
+                <view class="title">添加银行卡</view>
+            </view>
+            <view class="right">
+                <image src="../../static/img/row-right-index.png"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 开始提现 -->
+    <view class="withdrawal" style="height : {{list_height ? list_height : ''}}px">
+        <view class="title">提现金额</view>
+        <view class="ipts">
+            <text class="icon">￥</text>
+            <view class="ipt">
+                <input type="number" placeholder="请输入提现金额" value="{{withdrawal_moeny}}" bindinput="bindKeyInput" />
+            </view>
+        </view>
+        <view class="money">当前余额{{moeny}}元，<text class="btn" bindtap="all">全部提现</text> </view>
+        <view class="btns" bindtap="withdrawal">提现</view>
+    </view>
+    <!-- 弹窗 -->
+    <!-- <view class="pup-wrop" wx:if="{{is_pup}}"> -->
+    <van-popup show="{{is_pup}}" class="pup-wrop" custom-style="border-radius: 10px;">
+        <view class="pup">
+            <view class="title-wrop">
+                <view class="title">请选择提现到</view>
+                <view class="imgwrop close-img" bindtap="closePup">
+                    <image src="../../static/img/close.png"></image>
+                </view>
+            </view>
+            <view class="list">
+                <view class="item" wx:for="{{bankList}}" data-index="{{index}}" wx:key="index" catchtap="reportRadio">
+                    <view class="left">
+                        <view class="top">
+                            <view class="imgwrop {{!item.id ? 'weixin-icon':''}} {{!item.default_icon ? 'bank-icon' : ''}}">
+                                <image src="{{item.icon}}"></image>
+                            </view>
+                            <view class="bank-name">{{item.bank}}({{item.num}})</view>
+                        </view>
+                        <view class="arrival">{{item.arrival}}</view>
+                    </view>
+                    <view class="right">
+                        <radio color="#F16E22" checked="{{item.active}}"></radio>
+                    </view>
+                </view>
+                <view class="item" bindtap="goAddBank">
+                    <view class="left-add" >
+                        <view class="add">+</view>
+                        <view class="title">添加银行卡</view>
+                    </view>
+                    <view class="right right-icon">
+                        <image src="../../static/img/row-right-index.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </van-popup> 
+    <!-- </view> -->
+    <!-- 提现须知 -->
+    <view class="bottom-tips" bindtap="openTips">提现须知</view>
+    <!-- 须知弹窗 -->
+    <view class="pup-tips-wrop">
+        <van-popup show="{{ show_tips }}" round bind:close="closeTips" closeable>
+            <view class="pup-tips">
+                <view class="title">提现须知</view>
+                <view class="item">1.单日提现上线为5000.00元</view>
+                <view class="item">2.单日提现次数最大为10次</view>
+            </view>
+        </van-popup>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

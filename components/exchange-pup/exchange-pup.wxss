@@ -1,0 +1,51 @@
+.pup-wrop {
+    
+}
+
+.pup-wrop .pup {
+    padding-top: 48rpx;
+    width: 548rpx;
+    height: calc(342rpx - 48rpx);
+    background: #FFFFFF;
+   
+}
+
+.pup-wrop .title {
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000000;
+}
+
+.pup-wrop .content {
+    border-bottom: #E5E5E5 1px solid;
+    margin: 0 47rpx;
+    padding-bottom: 10rpx;
+    padding-top: 55rpx;
+}
+
+.pup-wrop .bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: #E5E5E5 1px solid;
+    margin-top: 49rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.pup-wrop .bottom .bootom-btn {
+    width: 50%;
+    text-align: center;
+}
+
+.pup-wrop .bottom .cancel {
+    border-right: #E5E5E5 1px solid;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.pup-wrop .bottom .determine {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #FE7221;
+}

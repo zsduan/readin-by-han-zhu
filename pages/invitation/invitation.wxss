@@ -1,0 +1,208 @@
+.banner swiper {
+    height: 992rpx;
+    position: relative;
+    margin-top: 30rpx;
+}
+
+.banner swiper .swiper-item {
+    height: 880rpx !important;
+    position: absolute;
+    top: 5%;
+}
+
+/* 1.1  1.1 */
+.banner swiper .swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .imgwrop {
+    background: #ddd;
+    height: 865rpx;
+    border-radius: 30rpx;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.banner swiper .swiper-active {
+    height: 992rpx !important;
+    top: 0%;
+}
+
+.banner swiper .imgwrop-active {
+    /* transform: scale(1.05); */
+    transition-duration: 0.3s;
+    margin-left: 27rpx;
+    width: 629rpx !important;
+    height: 955rpx !important;
+    border: 0;
+    box-shadow: 0rpx 18rpx 22rpx -2rpx #ddd;
+}
+
+.sport-wrop {
+    display: flex;
+    justify-content: center;
+    height: 80rpx;
+    align-items: center;
+}
+
+.sport-wrop .item {
+    width: 14rpx;
+    height: 14rpx;
+    background: #BFBFBF;
+    border-radius: 50%;
+    margin-right: 15rpx;
+}
+
+.sport-wrop .active {
+    background: #666666;
+}
+
+.details {
+    font-size: 36rpx;
+    font-family: "微软简标宋";
+    color: #333333;
+    text-align: center;
+    padding-top: 17rpx;
+}
+
+.en-details {
+    text-align: center;
+    font-size: 24rpx;
+    font-family: "Source Han Sans CN";
+    color: #575757;
+    padding-top: 15rpx;
+}
+
+.btns {
+    position: fixed;
+    bottom: 60rpx;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns .btn-wrop {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.btns .save {
+    width: 35rpx;
+    height: 30rpx;
+    margin-right: 14rpx;
+}
+
+.btns .share {
+    width: 37rpx;
+    height: 30rpx;
+    margin-right: 14rpx;
+}
+
+.btns .btn {
+    width: 266rpx;
+    height: 75rpx;
+    background: #FE7221;
+    box-shadow: 0rpx 6rpx 8rpx rgba(0, 0, 0, 0.2);
+    border-radius: 38rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns .btn-save {
+    margin-left: 89rpx;
+}
+
+.btns .btn-share {
+    margin-left: 40rpx;
+}
+
+.btns .btn-wrop button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 266rpx;
+    height: 75rpx;
+    background: #f00;
+    border-radius: 38rpx;
+    opacity: 0;
+}
+
+/* 首页弹窗 */
+
+.pup-wrop .top-img{
+    padding-bottom: 103rpx;
+}
+.pup-wrop .top-img image {
+    width: 100%;
+}
+
+.bottom-wrop-pup {
+    width: 100%;
+    padding: 18rpx 0;
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+}
+
+.bottom-wrop-pup .btns-pup{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns-pup .btn-wrop {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.btns-pup .save {
+    width: 35rpx;
+    height: 30rpx;
+    margin-right: 14rpx;
+}
+
+.btns-pup .share {
+    width: 37rpx;
+    height: 30rpx;
+    margin-right: 14rpx;
+}
+
+.btns-pup .btn {
+    width: 266rpx;
+    height: 75rpx;
+    background: #FE7221;
+    box-shadow: 0rpx 6rpx 8rpx rgba(0, 0, 0, 0.2);
+    border-radius: 38rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns-pup .btn-save {
+    margin-left: 89rpx;
+}
+
+.btns-pup .btn-share {
+    margin-left: 40rpx;
+}
+
+.btns-pup .btn-wrop button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 266rpx;
+    height: 75rpx;
+    background: #f00;
+    border-radius: 38rpx;
+    opacity: 0;
+}

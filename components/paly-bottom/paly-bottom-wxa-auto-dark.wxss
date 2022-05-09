@@ -1,0 +1,66 @@
+/* 
+此文件为开发者工具生成，生成时间: 2021/5/25 下午3:46:06
+使用方法：
+在 paly-bottom.wxss 文件末尾引入样式
+```
+@import "./paly-bottom-wxa-auto-dark.wxss";
+```
+ */
+
+@media (prefers-color-scheme: dark) {
+    .bottom-play-wrop .right {
+        background: rgb(255, 255, 255);
+    }
+
+    .bottom-play-wrop .left .imgwrop {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .bottom-play-wrop .right .right-left {
+        color: rgb(17, 17, 17);
+    }
+
+    .bottom-play-wrop .right .line {
+        border: rgb(0, 0, 0);
+    }
+
+    .great-circle {
+        background-color: rgb(55, 55, 55);
+    }
+
+    .great-circle .in-circle {
+        border: rgb(0, 0, 0);
+    }
+
+    .great-circle .in-circle .left {
+        border: rgb(0, 0, 0);
+    }
+
+    .great-circle .in-circle .right {
+        border: rgb(0, 0, 0);
+    }
+
+    .great-circle .inside-round {
+        background: rgb(17, 17, 17);
+    }
+
+    @keyframes goRight {
+        from {
+            left: 40rpx;
+        }
+
+        to {
+            left: 618rpx;
+        }
+    }
+
+    @keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+}

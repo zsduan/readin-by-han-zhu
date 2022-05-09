@@ -1,0 +1,99 @@
+.page{
+    padding: 30rpx 0;
+}
+
+.title-share {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40rpx;
+    padding-top: 20rpx;
+}
+
+.title-share .title {
+    width: 538rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.title-share .right {
+    width: calc(100% - 538rpx);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rpx;
+}
+
+.title-share .right .collection .img {
+    width: 38rpx;
+    height: 36rpx;
+}
+
+.title-share .right .share {
+    position: relative;
+}
+
+.title-share .right .share .img {
+    width: 44rpx;
+    height: 36rpx;
+}
+
+.title-share .right .btn {
+    position: absolute;
+    width: 44rpx;
+    height: 60rpx;
+    opacity: 0;
+}
+
+.author {
+    font-size: 26rpx;
+    color: #999999;
+    padding: 0 40rpx;
+}
+
+.intro {
+    margin: 0 40rpx;
+    font-size: 26rpx;
+    color: #999999;
+    background: #F9F9F9;
+    padding: 14rpx 20rpx;
+    margin-top: 15rpx;
+}
+
+.intro .intro-title{
+    font-weight: bold;
+    padding-bottom: 4rpx;
+}
+
+.read-time {
+    padding: 0 40rpx;
+    display: flex;
+    align-items: center;
+    padding-top: 15rpx;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 40rpx;
+}
+
+.read-time .time {
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+    padding-left: 32rpx;
+}
+
+.read-time .read {
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #999999;
+}
+
+.read-time .img {
+    width: 18rpx;
+    height: 18rpx;
+}
+
+.read-time .reading {
+    display: inline-block;
+    padding-left: 10rpx;
+}

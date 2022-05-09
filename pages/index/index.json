@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "/miniprogram_npm/@vant/weapp/notice-bar",
+    "van-rate": "/miniprogram_npm/@vant/weapp/rate",
+    "book-item" : "/components/book-item/book-item",
+    "history" : "/components/history/history",
+    "member-pup":"/components/member-pup/member-pup",
+    "recommend-index" : "/components/recommend-index/recommend-index",
+    "hot-recommend" : "/components/hot-recommend/hot-recommend",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTitleText" : "韩朱读书",
+  "enablePullDownRefresh": true
+
+}

@@ -1,0 +1,61 @@
+<view class="page">
+    <view class="banner">
+        <swiper previous-margin="71rpx" next-margin="71rpx" current="1" circular bindchange="bannerChange">
+            <swiper-item class="swiper-item {{item.active ? 'swiper-active' : ''}}" wx:for="{{bannerList}}"
+                wx:key="index">
+                <view class="imgwrop {{item.active ? 'imgwrop-active' : ''}}">
+                    <image src="{{imgSrc}}{{item.thumb}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="title">{{bannerList[bannerId].name}}</view>
+    <view class="details">{{bannerList[bannerId].introduction}}</view>
+    <view class="btns" bindtap="openVip" wx:if="{{!is_ios}}">赠送礼品卡（{{bannerList[bannerId].price}}/年）</view>
+    <view class="content" style="height : {{list_height ? list_height : ''}}px">
+        <!-- nav -->
+        <view class="nav">
+            <view class="item {{item.active ? 'active':''}}" wx:for="{{navList}}" wx:key="index" data-index="{{index}}"
+                bindtap="changeTop">
+                {{item.name}}
+                <view class="line " wx:if="{{item.active}}"></view>
+            </view>
+        </view>
+        <view class="list" wx:if="{{shopList.length}}">
+            <view class="items" wx:for="{{shopList}}" wx:key="index">
+                <view class="left">
+                    <view class="name">{{item.card}}</view>
+                    <view class="time-price">
+                        <text>{{item.time}}</text>
+                        <text>￥{{item.price}}</text>
+                    </view>
+                </view>
+                <view class="center" wx:if="{{item.user_id}}">
+                    <view class="icon">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="center-name">{{item.nickname}}</view>
+                </view>
+                <view wx:if="{{is_pay}}" class="btnss">
+                    <button class="btn button" open-type="share" wx:if="{{!item.status}}" data-id="{{item.id}}">赠送</button>
+                    <view class="btn" wx:if="{{!item.status}}">赠送</view>
+                    <view class="btn btn-already" wx:else>已赠送</view>
+                </view>
+                <view wx:else>
+                    <view class="btn" wx:if="{{item.status == 1}}" data-id="{{item.id}}" bindtap="setUserCard">领取</view>
+                    <view class="btn btn-already" wx:else>已领取</view>
+                </view>
+            </view>
+        </view>
+        <view class="empty" wx:else>
+            <image
+                src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/q4CuP7pKTSxuF7P2p83g4xf47ujG7M.png">
+            </image>
+        </view>
+    </view>
+
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

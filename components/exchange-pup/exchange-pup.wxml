@@ -1,0 +1,17 @@
+<view class="page">
+    <!-- 兑换弹窗 -->
+    <van-popup show="{{is_exchange}}" class="pup-wrop" custom-style="border-radius: 10px;">
+    <!-- <view class="pup-wrop" wx:if="{{is_exchange}}"> -->
+        <view class="pup">
+            <view class="title">会员兑换</view>
+            <view class="content">
+                <input type="text" placeholder="请输入会员兑换码" bindinput="bindKeyInput"/>
+            </view>
+            <view class="bottom">
+                <view class="cancel bootom-btn" bindtap="cancel">取消</view>
+                <view class="determine bootom-btn" bindtap="determine">确定</view>
+            </view>
+        </view>
+    </van-popup>
+    <!-- </view> -->
+</view>

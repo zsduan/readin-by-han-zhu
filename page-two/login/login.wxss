@@ -1,0 +1,101 @@
+.page{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.read {
+    height: 103rpx;
+    width: 506rpx;
+    margin: 0 auto;
+    margin-top: 249rpx;
+}
+
+.read image {
+    height: 103rpx;
+    width: 506rpx;
+}
+
+.logo {
+    width: 479rpx;
+    height: 205rpx;
+    margin: 0 auto;
+    margin-top: 30rpx;
+}
+
+.logo image {
+    height: 100%;
+    width: 100%;
+}
+
+.tips {
+    text-align: center;
+    font-size: 32rpx;
+    font-family: SimSun;
+    letter-spacing: 5rpx;
+    color: #FFFFFF;
+}
+
+.btns {
+    width: 550rpx;
+    height: 90rpx;
+    background: #FE7221;
+    border-radius: 45rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 234rpx;
+}
+
+.btns image {
+    width: 37rpx;
+    height: 30rpx;
+}
+
+.btns text {
+    display: inline-block;
+    padding-left: 20rpx;
+}
+
+.casual {
+    font-size: 30rpx;
+    color: #999999;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 164rpx;
+}
+
+.tip {
+    font-size: 24rpx;
+    color: #6A6A6A;
+    margin-top: 63rpx;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60rpx;
+    width: 430rpx;
+}
+
+.tip text {
+    color: #FE7221;
+}
+
+.back{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.back image{
+    width: 100%;
+}

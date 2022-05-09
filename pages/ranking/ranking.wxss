@@ -1,0 +1,234 @@
+@import "./ranking.skeleton.wxss";
+
+.page {
+    background: #2C2927;
+}
+
+.top-wrop {
+    position: relative;
+}
+
+.top-wrop .back {
+    width: 100%;
+}
+
+.top-wrop .icon {
+    width: 142rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 197rpx;
+    left: 147rpx;
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/57e4321c15e799f43dc0fe7b0dfc093f.png");
+    background-size: 100% 100%;
+}
+
+.top-wrop .icon image {
+    width: 100%;
+}
+
+.top-wrop .title {
+    position: absolute;
+    top: 342rpx;
+    left: 92rpx;
+    width: 241rpx;
+    text-align: center;
+    color: #EBDCA5;
+    font-size: 30rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.content {
+    margin: 0 20rpx;
+    background: #FFFFFF;
+    box-shadow: 0px -4rpx 10rpx rgba(0, 0, 0, 0.04);
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+    overflow: hidden;
+}
+
+.content .rank {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 45rpx;
+    position: relative;
+}
+
+.content .rank .rank-top image {
+    width: 59rpx;
+    height: 79rpx;
+}
+
+.content .rank .ranking {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333333;
+    width: 69rpx;
+    text-align: center;
+}
+
+.content .rank .icon {
+    width: 80rpx;
+    height: 80rpx;
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/57e4321c15e799f43dc0fe7b0dfc093f.png");
+    background-size: 100% 100%;
+}
+
+.content .rank .icon image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.content .rank .name {
+    font-size: 28rpx;
+    color: #333333;
+    width: 125rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.content .rank .is-like image {
+    width: 37rpx;
+    height: 37rpx;
+}
+
+.content .rank .time {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.content .rank .is-like .num {
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #D8D8D8;
+    text-align: center;
+}
+
+.rank-empty {
+    text-align: center;
+    font-size: 30rpx;
+    color: #F16E22;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+
+.header {
+    padding: 26rpx 47rpx 29rpx 47rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #666666;
+    font-weight: bold;
+    background: #FFFFFF;
+    box-shadow: 0rpx 0rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+
+.header .title {
+    width: 84rpx;
+}
+
+.header .icon {
+    width: 80rpx;
+}
+
+.header .nike-name {
+    width: 130rpx;
+    padding-left: 30rpx;
+}
+
+
+.header .time {
+    width: 120rpx;
+}
+
+.header .like {
+    width: 30rpx;
+}
+
+.content .ranks-first {
+    background: #FFF7E2;
+}
+
+.content .ranks-first .rank-line {
+    width: 20rpx;
+    height: 100%;
+    background: linear-gradient(315deg, #F6BE39 0%, #FFE18B 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content .ranks-two {
+    background: #EAECF8;
+}
+
+.content .ranks-two .rank-line {
+    width: 20rpx;
+    height: 100%;
+    background: linear-gradient(319deg, #99B8FD 0%, #DBE6FF 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content .ranks-three {
+    background: #FBF2EA;
+}
+
+.content .ranks-three .rank-line {
+    width: 20rpx;
+    height: 100%;
+    background: linear-gradient(135deg, #EED0B8 0%, #D8AA86 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.-content .rank-top image {
+    width: 59rpx;
+    height: 79rpx;
+}
+
+.top-wrop .rules-wrop {
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 30rpx;
+    width: 160rpx;
+}
+
+.top-wrop .rules image {
+    width: 24rpx;
+    height: 24rpx;
+}
+
+.top-wrop .rules {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.top-wrop .rules text {
+    display: inline-block;
+    padding-left: 10rpx;
+}

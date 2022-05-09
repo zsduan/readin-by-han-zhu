@@ -1,0 +1,152 @@
+.history {
+  margin-bottom: 20rpx;
+}
+
+.history .history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40rpx;
+}
+
+.history .history-title .name {
+  height: 45rpx;
+  font-size: 38rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  line-height: 45rpx;
+  color: #333333;
+}
+
+.history .history-title .name-active {
+  font-size: 34rpx;
+  padding-left: 40rpx;
+}
+
+.history .history-title .more {
+  display: inline-block;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999999;
+  line-height: 35rpx;
+  text-align: center;
+}
+
+.history .history-title .more .img {
+  width: 17rpx;
+  height: 17rpx;
+}
+
+.history .content {
+  width: calc(100% - 50rpx);
+  margin-left: 40rpx;
+}
+
+.history .content .list {
+  white-space: nowrap;
+  padding: 20rpx 0;
+}
+
+.history .content .list .item {
+  display: inline-block;
+  width: 445rpx;
+  white-space: normal;
+  margin-right: 20rpx;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20rpx;
+}
+
+.history .content .list .imgwrop {
+  width: 125rpx;
+  height: 180rpx;
+  background : url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/05/b169dba0646a8526e79d8b43da3db5d0.png");
+  background-size:100% 100%;
+}
+
+.history .content .list .imgwrop .img {
+  width: 100%;
+  height: 100%;
+}
+
+.history .content .list .right {
+  width: calc(100% - 140rpx);
+  height: 180rpx;
+  padding-left: 10rpx;
+}
+
+.history .content .list .right .name {
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  padding-bottom: 10rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.history .content .list .right .details {
+  height: 67rpx;
+  font-size: 24rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  line-height: 36rpx;
+  color: #999999;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.history .content .list .circle {
+  display: flex;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.history .content .list .circle .floor {
+  width: 214rpx;
+  height: 14rpx;
+  background: #EFEFEF;
+  border-radius: 27rpx;
+  position: relative;
+}
+
+.history .content .list .circle .top {
+  height: 14rpx;
+  background: linear-gradient(90deg, #F97712 0%, #FF8E0D 100%);
+  border-radius: 27rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.history .content .list .circle .num {
+  font-size: 20rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  line-height: 26rpx;
+  color: #F16E22;
+}
+
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}

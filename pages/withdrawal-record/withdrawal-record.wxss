@@ -1,0 +1,156 @@
+page {
+  background-color: #F6F6F6;
+}
+
+.box {
+  background: #F6F6F6;
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+
+.main {
+  width: 670rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  margin: 30rpx auto 0;
+  padding-bottom: 25rpx;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 33rpx 0rpx;
+}
+
+.item {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.item .top {
+  font-size: 28rpx;
+  color: blue;
+}
+
+.left {
+  color: #E4A20A;
+}
+
+.right {
+  color: #DF1E1E;
+}
+
+.price {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333;
+  padding-left: 30rpx;
+}
+
+.withdraw-cash {
+  padding: 30rpx 40rpx 0;
+  height: 37rpx;
+  line-height: 37rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.withdraw-cash .name {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.withdraw-cash .types {
+  padding-left: 60rpx;
+}
+
+.withdraw-cash .types .imgs {
+  height: 30rpx;
+  width: 40rpx;
+  padding-right: 18rpx;
+}
+
+.withdraw-cash .types text {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.withdraw-cash .types .img {
+  width: 42rpx;
+  height: 26rpx;
+  padding-right: 18rpx;
+}
+
+.service {
+  padding: 20rpx 40rpx 0;
+  height: 37rpx;
+  line-height: 37rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.service .name {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.service .price {
+  font-size: 28rpx;
+  color: #333333;
+  padding-left: 60rpx;
+}
+
+.time-wrap {
+  padding: 20rpx 40rpx 0;
+  height: 37rpx;
+  line-height: 37rpx;
+}
+
+.time-wrap .title {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.time-wrap .time {
+  font-size: 28rpx;
+  color: #333333;
+  padding-left: 33rpx;
+}
+
+.fail-wrap {
+  padding: 20rpx 40rpx 0;
+}
+
+.fail-wrap .title {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.fail-wrap .content {
+  background: #F6F6F6;
+  border-radius: 6rpx;
+  margin-top: 15rpx;
+}
+
+.fail-wrap .content view {
+  font-size: 28rpx;
+  color: #666666;
+  padding: 18rpx 24rpx;
+}
+
+.pageEng {
+  padding: 40rpx 0 0 0;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  padding-top: 282rpx;
+}
+
+.empty image {
+  width: 500rpx;
+}

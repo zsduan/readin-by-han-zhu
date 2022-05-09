@@ -1,0 +1,126 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/6/4 上午10:48:35
+使用方法：
+在 D:\韩朱读书 -- 原生小程序\pages\ranking\ranking.wxml 引入模板
+
+```
+<import src="ranking.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\韩朱读书 -- 原生小程序\pages\ranking\ranking.wxss 中引入样式
+```
+@import "./ranking.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="page">
+      <view class="page">
+        <view class="top-wrop">
+          <image class="back sk-image" mode="widthFix" style="height: 223px;"></image>
+          <view class="icon sk-image">
+            <image mode="widthFix" style="height: 71px;" class="sk-image"></image>
+          </view>
+          <view class="title sk-transparent sk-text-14-2857-519 sk-text" style="background-position-x: 50%;">有你</view>
+          <view class="rules-wrop">
+            <view class="rules">
+              <image class="sk-image"></image>
+              <text class="sk-transparent sk-text-14-2857-300 sk-text">排行规则</text>
+            </view>
+          </view>
+        </view>
+        <view class="content">
+          <view class="header">
+            <view class="title sk-transparent sk-text-14-2857-553 sk-text">排名</view>
+            <view class="icon sk-transparent sk-text-14-2857-426 sk-text">头像</view>
+            <view class="nike-name sk-transparent sk-text-14-2857-911 sk-text">昵称</view>
+            <view class="time sk-transparent sk-text-14-2857-965 sk-text">学习时长</view>
+            <view class="like"></view>
+          </view>
+          <view class="rank ranks-first">
+            <view class="rank-line sk-image"></view>
+            <view class="rank-top">
+              <image class="sk-image"></image>
+            </view>
+            <view class="icon sk-image">
+              <image lazy-load="true" class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-328 sk-text">有你</view>
+            <view class="time sk-transparent sk-text-14-2857-696 sk-text">00:07:54</view>
+            <view class="is-like">
+              <view class="num sk-transparent sk-text-14-2857-907 sk-text" style="background-position-x: 50%;">0</view>
+              <view class="like" data-id="3">
+                <image class="sk-image"></image>
+              </view>
+            </view>
+          </view>
+          <view class="rank ranks-two">
+            <view class="rank-line sk-image"></view>
+            <view class="rank-top">
+              <image class="sk-image"></image>
+            </view>
+            <view class="icon sk-image">
+              <image lazy-load="true" class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-765 sk-text">张晓辰</view>
+            <view class="time sk-transparent sk-text-14-2857-550 sk-text">00:00:51</view>
+            <view class="is-like">
+              <view class="num sk-transparent sk-text-14-2857-264 sk-text" style="background-position-x: 50%;">0</view>
+              <view class="like" data-id="544">
+                <image class="sk-image"></image>
+              </view>
+            </view>
+          </view>
+          <view class="rank ranks-three">
+            <view class="rank-line sk-image"></view>
+            <view class="rank-top">
+              <image class="sk-image"></image>
+            </view>
+            <view class="icon sk-image">
+              <image lazy-load="true" class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-467 sk-text">天道酬勤</view>
+            <view class="time sk-transparent sk-text-14-2857-10 sk-text">00:00:00</view>
+            <view class="is-like">
+              <view class="num sk-transparent sk-text-14-2857-627 sk-text" style="background-position-x: 50%;">1</view>
+              <view class="like" data-id="1">
+                <image class="sk-image"></image>
+              </view>
+            </view>
+          </view>
+          <view class="rank">
+            <view class="ranking sk-transparent sk-text-14-2857-55 sk-text" style="background-position-x: 50%;">4</view>
+            <view class="icon sk-image">
+              <image lazy-load="true" class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-199 sk-text">.王</view>
+            <view class="time sk-transparent sk-text-14-2857-431 sk-text">00:00:00</view>
+            <view class="is-like">
+              <view class="num sk-transparent sk-text-14-2857-733 sk-text" style="background-position-x: 50%;">1</view>
+              <view class="like" data-id="2">
+                <image class="sk-image"></image>
+              </view>
+            </view>
+          </view>
+          <view class="rank">
+            <view class="ranking sk-transparent sk-text-14-2857-232 sk-text" style="background-position-x: 50%;">5</view>
+            <view class="icon sk-image">
+              <image lazy-load="true" class="sk-image"></image>
+            </view>
+            <view class="name sk-transparent sk-text-14-2857-756 sk-text">韩朱读书会</view>
+            <view class="time sk-transparent sk-text-14-2857-479 sk-text">00:00:00</view>
+            <view class="is-like">
+              <view class="num sk-transparent sk-text-14-2857-326 sk-text" style="background-position-x: 50%;">0</view>
+              <view class="like" data-id="4">
+                <image class="sk-image"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

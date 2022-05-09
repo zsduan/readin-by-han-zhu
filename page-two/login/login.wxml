@@ -1,0 +1,18 @@
+<view class="page">
+    <view class="back">
+        <image mode="widthFix" src="../static/img/back.png"></image>
+    </view>
+    <view class="logo">
+        <image src="../static/img/logo.png"></image>
+    </view>
+    <view class="read">
+        <image src="../static/img/read.png"></image>
+    </view>
+    <view class="tips">新用户首次登录，赠送7天体验VIP</view>
+    <view class="btns" bindtap="getUserInfo">
+        <image src="../static/img/wechat.png"></image>
+        <text>微信用户一键登录</text>
+    </view>
+    <view class="casual" bindtap="goHome">随便看看</view>
+    <view class="tip">授权登录即代表同意<text bindtap="goService">《用户服务协议》</text></view>
+</view>

@@ -1,0 +1,242 @@
+.comment-item {
+    padding-bottom: 120rpx;
+    padding-top: 20rpx;
+}
+
+.comment-item .user-info {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 40rpx;
+}
+
+.comment-item .user-info .user-icon {
+    width: 66rpx;
+    height: 66rpx;
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/57e4321c15e799f43dc0fe7b0dfc093f.png");
+    background-size: 100% 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.comment-item .user-info .user-icon .img {
+    width: 100%;
+    height: 100%;
+}
+
+.comment-item .user-info .right {
+    padding-left: 24rpx;
+}
+
+.comment-item .user-info .name {
+    height: 31rpx;
+    font-size: 28rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    line-height: 31rpx;
+    color: #666666;
+}
+
+.comment-item .user-info .time {
+    height: 29rpx;
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    line-height: 29rpx;
+    color: #999999;
+    padding-top: 10rpx;
+}
+
+.comment-item .user-info .top {
+    font-size: 24rpx;
+    color: #F16E22;
+    padding: 2rpx 6rpx;
+    display: inline-block;
+    margin-left: 10rpx;
+    border: 1px solid #F16E22;
+    border-radius: 8rpx;
+}
+
+.comment-item .user-info .cream {
+    font-size: 24rpx;
+    color: #F16E22;
+    padding: 2rpx 6rpx;
+    display: inline-block;
+    margin-left: 10rpx;
+    border: 1px solid #F16E22;
+    border-radius: 8rpx;
+
+}
+
+.comment-item .contents {
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-item .contents:last-child{
+    border-bottom: 0;
+}
+
+.comment-item .contents-active {
+    border-bottom: 0;
+}
+
+.comment-item .mainContent {
+    padding-left: 130rpx;
+    font-size: 30rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #333333;
+    letter-spacing: 5rpx;
+    margin-right: 40rpx;
+}
+
+.comment-item .mainContent .text {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    line-height: 48rpx;
+    letter-spacing: 0rpx;
+}
+
+.comment-item .mainContent .up {
+    font-size: 28rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #1A83CC;
+}
+
+.comment-item .mainContent .user-id{
+    color: #5BA5D8;
+    display: inline-block;
+    padding-right: 10rpx;
+}
+
+.comment-item .mainContent .like-comments {
+    display: flex;
+    align-items: center;
+    padding-top: 20rpx;
+    position: relative;
+}
+
+.comment-item .mainContent .more {
+    width: 25rpx;
+    height: 25rpx;
+    position: absolute;
+    right: 15rpx;
+    top: 30rpx;
+}
+
+.comment-item .mainContent .more {
+    width: 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-item .mainContent .more .spot {
+    width: 8rpx;
+    height: 8rpx;
+    border-radius: 50%;
+    background: #B5B5B5;
+    display: inline-block;
+
+}
+
+.comment-item .mainContent .like .img {
+    width: 34rpx;
+    height: 34rpx;
+}
+
+.comment-item .mainContent .like .num {
+    display: inline-block;
+    padding-left: 10rpx;
+    font-size: 26rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #B5B5B5;
+    letter-spacing: 0rpx;
+
+}
+
+.comment-item .mainContent .comments {
+    padding-left: 47rpx;
+    padding-top: 4rpx;
+}
+
+.comment-item .mainContent .comments .img {
+    width: 32rpx;
+    height: 29rpx;
+}
+
+.comment-item .reply {
+    background: #F5F5F5;
+    border-radius: 6rpx;
+    padding: 25rpx;
+    font-size: 30rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 130rpx;
+    margin-right: 40rpx;
+    margin-top: 20rpx;
+}
+
+.comment-item .reply .user-id {
+    color: #5BA5D8;
+    display: inline-block;
+    padding-right: 10rpx;
+}
+
+.comment-item .reply .item {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 10rpx 0;
+}
+
+.comment-item .reply .user-reply {
+    padding-left: 5rpx;
+}
+
+.comment-item .reply .sum-comment-item {
+    font-size: 24rpx;
+    color: #5BA5D8;
+}
+
+.comment-item .empty {
+    width: 450rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+
+.comment-item .empty .img {
+    width: 450rpx;
+}
+
+.comment-item .sum-comment {
+    font-size: 24rpx;
+    color: #5BA5D8;
+}
+
+.comment-item .about-comment {
+    font-size: 22rpx;
+    color: #999999;
+    margin: 0 40rpx;
+    margin-top: 20rpx;
+}
+
+.comment-item .line {
+    height: 20rpx;
+    background: #F9F9F9;
+    border-radius: 18px;
+    margin: 0 40rpx;
+    margin-top: 30rpx;
+}

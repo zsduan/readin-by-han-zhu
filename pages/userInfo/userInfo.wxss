@@ -1,0 +1,73 @@
+.item {
+    padding:  30rpx 30rpx 30rpx 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item .icon {
+    width: 80rpx;
+    height: 80rpx;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.item .tips{
+    color: #f00;
+}
+
+.item .title {
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.item .icon image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.item .right {
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.item .right text{
+    display: inline-block;
+    padding-right: 10rpx;
+}
+.item .right image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.line-20 {
+    background: #F6F6F6;
+    width: 100%;
+    height: 20rpx;
+    margin-bottom: 0;
+}
+
+.line-30 {
+    background: #F6F6F6;
+    width: 100%;
+    height: 30rpx;
+}
+
+.exit{
+    margin-top: 40rpx;
+}
+
+.exit .btn{
+    color: #fff;
+    width: 400rpx;
+    height: 75rpx;
+    background: #FE7221;
+    box-shadow: 0rpx 6rpx 8rpx rgba(0, 0, 0, 0.2);
+    border-radius: 38rpx;
+    font-size: 30rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75rpx;
+}
+

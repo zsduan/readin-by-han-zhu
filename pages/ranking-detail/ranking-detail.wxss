@@ -1,0 +1,161 @@
+
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.header{
+  background: linear-gradient(221deg, #E32046 0%, #F16E22 43%, #F58D69 89%, #F5866F 100%);
+  z-index: 1;
+  height: 281rpx;
+}
+.content {
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 40rpx 40rpx 0 0;
+  position: absolute;
+  top: 158rpx;
+}
+
+.headPhoto {
+  width: 100vw;
+  height: 200rpx;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  position: absolute; 
+  top: -81rpx;
+  background-color: transparent;
+}
+
+.headPhoto view {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 9rpx;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headPhoto image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.userName {
+  margin-top: 123rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333333;
+  padding: 10rpx 40rpx 0 40rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.address {
+  text-align: center;
+  font-size: 30rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  color: #999999;
+  padding-top: 10rpx;
+}
+
+.address image {
+  width: 24rpx;
+  height: 30rpx;
+  padding-top: 5rpx;
+  padding-right: 10rpx;
+}
+
+.main {
+  padding: 15rpx 40rpx 0 40rpx;
+}
+
+.main .list {
+  width: 100%;
+  height: 125rpx;
+  background: #F6F6F6;
+  border-radius: 10rpx;
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .list .item {
+  text-align: center;
+  width: 100%;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.main .list .item view {
+  padding: 20rpx 0 5rpx 0;
+}
+
+.main .list .item .val {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.main .list .item .vals {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FE7221;
+}
+
+
+.line {
+  width: 750rpx;
+  height: 10rpx;
+  background: #F6F6F6;
+}
+
+.histroy-study {
+  padding: 0 40rpx;
+}
+
+.histroy-study .title {
+  padding-top: 40rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.histroy-study .title .left {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.histroy-study .title .right {
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #999999;
+}
+
+.histroy-study .title .right .right-time{
+  color: #333;
+}
+
+.histroy-study .ends{
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+  padding: 20rpx 0;
+}
+
+.pageEnd{
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+  padding-top: 30rpx;
+}

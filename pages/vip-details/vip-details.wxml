@@ -1,0 +1,36 @@
+<view class="page">
+    <view class="content">
+        <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/05/d0e05da716f4130a5732eff36626c8ee.png?id={{num}}" mode="widthFix" lazy-load></image>
+        <view class="list">
+            <view class="item" wx:for="{{bookList}}" wx:key="index">
+                <view class="imgwrop">
+                    <image lazy-load src="{{imgSrc}}{{item.thumb}}"></image>
+                    <view class="paly" data-index="{{index}}" bindtap="playAudio" wx:if="{{!item.active}}">
+                        <image src="../../static/img/paly-vip.png"></image>
+                    </view>
+                    <view class="paly" data-index="{{index}}" wx:else bindtap="pauseAudio">
+                        <image src="../../static/img/pause-vip.png"></image>
+                    </view>
+                </view>
+                <view class="title">《{{item.title}}》</view>
+            </view>
+        </view>
+    </view>
+    <view class="back">
+        <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/05/3097509a77794f22503ec661b82b8ba1.jpg?id={{num}}" mode="widthFix" lazy-load></image>
+    </view>
+    <view class="vip-wrop">
+        <view class="left">
+            <image src="../../static/img/goHome.png" bindtap="goHome"></image>
+        </view>
+        <view class="right">
+            <image src="../../static/img/freeVip.png" class="freeVip" bindtap="freeVip"></image>
+            <image src="../../static/img/exchange.png" class="openVip" bindtap="exchange" wx:if="{{is_ios}}"></image>
+            <image src="../../static/img/openVip.png" class="openVip" bindtap="openVip" wx:if="{{!is_ios}}"></image>
+        </view>
+    </view>
+    <!-- 兑换弹窗 -->
+    <block>
+        <exchange-pup is_exchange="{{is_exchange}}" pageUrls="{{pageUrls}}"></exchange-pup>
+    </block>
+</view>

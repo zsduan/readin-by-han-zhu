@@ -1,0 +1,519 @@
+.color-picker-demo {
+    min-height: 100vh;
+    height: 150vh;
+    position: fixed;
+    top: -70rpx;
+    width: 100%;
+}
+
+.color-picker-demo .c {
+    text-align: center;
+    padding: 25rpx;
+}
+
+.color-picker-demo .wrapper {
+    position: relative;
+    margin-bottom: 25rpx;
+}
+
+.color-picker-demo .wrapper .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rpx;
+    background: #fff;
+}
+
+.color-picker-demo .wrapper .flex .current {
+    font-size: 34rpx;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-picker-demo .wrapper .flex .current text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.color-picker-demo .wrapper .flex .current .hex {
+    width: 150rpx;
+}
+
+.color-picker-demo .wrapper .flex .color {
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 30rpx;
+    border: 2rpx solid #666;
+}
+
+.color-picker-demo .wrapper.wrapper-absolute .color-picker-wrapper {
+    padding: 25rpx;
+    background: #fff;
+    position: absolute;
+    right: 20rpx;
+    top: 115rpx;
+    z-index: 10;
+    box-shadow: 1rpx 1rpx 12rpx 8rpx #ccc;
+}
+
+.color-picker-demo .wrapper.wrapper-relative .color-picker-wrapper {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    padding: 25rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.color-picker-demo .mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: transparent;
+}
+
+.color-picker-demo .link {
+    padding: 25rpx;
+}
+
+.color-tips {
+    position: absolute;
+    color: #999;
+    font-size: 30rpx;
+    top: 68rpx;
+    left: 80rpx;
+}
+
+/* 插件引入结束，自定义开始 */
+.canvas-wrop-wrop{
+    background: rgba(33, 33, 33, 0.5);
+    position: fixed;
+    top : 0 ;
+    left: 0 ;
+    right : 0;
+    bottom:  0;
+    z-index: 20;
+}
+.canvas-wrop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.canvas-top {
+    height: 449px;
+    width: 331px;
+    box-shadow: 4rpx 4rpx 8rpx rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+
+.canvas-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 26rpx;
+}
+
+.canvas-close {
+    margin-left: 643rpx;
+    margin-top: 21rpx;
+    margin-bottom: 14rpx;
+    box-shadow: 0px -5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 40rpx 40rpx 0px 0px;
+}
+
+.canvas-close image{
+    width: 75rpx;
+    height: 75rpx;
+}
+
+.canvas-btns .btn-wrop {
+    width: 50%;
+}
+
+.canvas-btns .btn-wrop .imgWrop {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.canvas-btns .btn-wrop image{
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.canvas-btns .btn {
+    width: 112rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    margin-left: 201rpx;
+}
+
+.canvas-btns .btn-share {
+    margin-left: 58rpx;
+    position: relative;
+}
+
+.canvas-btns .btn-share button{
+    position: absolute;
+    top: 0;
+    width: 112rpx;
+    height: 140rpx;
+    opacity: 0;
+}
+
+
+.top-wrop {
+    height: 898rpx;
+    box-shadow: 4rpx 4rpx 8rpx rgba(0, 0, 0, 0.2);
+    border-radius: 20rpx;
+    margin: 0 45rpx;
+    margin-top: 30rpx;
+    position: relative;
+    transition-duration: 0.5s;
+    overflow: hidden;
+}
+
+.top-wrop-active {
+    transform: scale(0.8);
+    margin-top: 20rpx;
+    transition-duration: 0.5s;
+}
+
+.top-wrop .back {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top-wrop .back image {
+    width: 100%;
+    height: 100%;
+}
+
+.top-wrop .icon {
+    width: 100rpx;
+    height: 100rpx;
+    padding-top: 30rpx;
+    margin-left: 40rpx;
+}
+
+.top-wrop .icon image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.top-wrop .username {
+    padding-left: 40rpx;
+    font-size: 30rpx;
+    font-family: "Microsoft YaHei";
+    color: #FFFFFF;
+    padding-top: 8rpx;
+}
+
+.top-wrop .date {
+    padding-left: 40rpx;
+    font-size: 26rpx;
+    font-family: "Microsoft YaHei";
+    color: #FFFFFF;
+}
+
+.top-wrop .rank {
+    margin-left: 40rpx;
+    font-size: 100rpx;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 45rpx;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+}
+
+.top-wrop .rank-title {
+    padding-left: 40rpx;
+    font-size: 30rpx;
+    font-family: "Microsoft YaHei";
+    color: #FFFFFF;
+    padding-top: 10rpx;
+}
+
+.top-wrop .read {
+    margin-left: 40rpx;
+    font-size: 50rpx;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-top: 45rpx;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    letter-spacing: 8rpx;
+}
+
+.top-wrop .read-title {
+    padding-left: 40rpx;
+    font-size: 30rpx;
+    font-family: "Microsoft YaHei";
+    color: #FFFFFF;
+    padding-top: 10rpx;
+}
+
+.top-wrop .tips {
+    font-size: 30rpx;
+    font-family: "Microsoft YaHei";
+    color: #FFFFFF;
+    padding-top: 138rpx;
+    padding-left: 40rpx;
+    max-height: 121rpx;
+    overflow: hidden;
+    width: 370rpx;
+}
+
+.top-wrop .logo {
+    position: absolute;
+    top: 0;
+    right: -66rpx;
+}
+
+.top-wrop .logo image {
+    width: 350rpx;
+    height: 140rpx;
+}
+
+.top-wrop .code {
+    position: absolute;
+    right: 40rpx;
+    bottom: 30rpx;
+    background-color: #fff;
+    border-radius: 4rpx;
+}
+
+.top-wrop .code image {
+    width: 136rpx;
+    height: 136rpx;
+}
+
+.top-wrop .edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.top-wrop .edit image {
+    width: 184rpx;
+    height: 122rpx;
+}
+
+.save-share {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 90rpx;
+}
+
+.save-share .btn-wrop {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.save-share .save {
+    width: 35rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+}
+
+.save-share .home {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+}
+
+.save-share .btn {
+    width: 266rpx;
+    height: 75rpx;
+    background: #FE7221;
+    border-radius: 38rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save-share .btn-home {
+    margin-left: 89rpx;
+    background: #fff;
+    color: #FE7221;
+    width: 264rpx;
+    height: 73rpx;
+    border: 1px solid #FE7221;
+}
+
+.save-share .btn-save {
+    margin-left: 40rpx;
+}
+
+.save-share .btn-wrop button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 266rpx;
+    height: 75rpx;
+    background: #f00;
+    border-radius: 38rpx;
+    opacity: 0;
+}
+
+.tips-wrop {
+    font-size: 28rpx;
+    font-family: "Microsoft YaHei";
+    color: #999999;
+    padding: 70rpx 45rpx;
+}
+
+.tips-wrop .title {
+    padding-bottom: 20rpx;
+}
+
+.pup {
+    position: relative;
+    /* border-radius: 0 20rpx 0 20rpx; */
+}
+
+.pup .close-save {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rpx 40rpx;
+    position: fixed;
+    width: calc(100% - 80rpx);
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 0px -5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+}
+
+.pup .close-save image {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.pup .close-save .complete {
+    width: 143rpx;
+    height: 60rpx;
+    border: 1px solid #FE7221;
+    border-radius: 38rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    color: #FE7221;
+}
+
+.pup .title {
+    font-size: 34rpx;
+    color: #333333;
+    padding: 30rpx 40rpx;
+}
+
+.pup .title-top {
+    padding-top: 112rpx;
+}
+
+.pup .scroll {
+    white-space: nowrap;
+    padding: 0 40rpx;
+    width: calc(100% - 80rpx);
+}
+
+.pup .scroll .item {
+    width: 130rpx;
+    height: 130rpx;
+    background: #FE7221;
+    border-radius: 8rpx;
+    display: inline-block;
+    margin-right: 20rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.pup .scroll .item image {
+    width: 130rpx;
+    height: 130rpx;
+}
+
+.pup .scroll .add image {
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pup .scroll .border{
+    border: 4rpx solid #FE7221;
+}
+
+.pup .textarea {
+    padding: 0 40rpx;
+    position: relative;
+}
+
+.pup .textarea textarea {
+    background: #F6F6F6;
+    border-radius: 10rpx;
+    padding: 20rpx;
+    width: calc(100% - 40rpx);
+    height: 140rpx;
+    color: #999;
+}
+
+.pup .textarea .font-num {
+    position: absolute;
+    right: 62rpx;
+    bottom: 20rpx;
+    color: #999;
+}
+
+.pup .color-change {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rpx 40rpx;
+    margin-top: 20rpx;
+    padding-bottom: 60rpx;
+}
+
+.pup .color-change image {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.pup .color-change .right {
+    display: flex;
+    align-items: center;
+}
+
+.pup .color-change .right .box {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
+}
+
+.font-color {
+    margin: 0 40rpx;
+    margin-bottom: 40rpx;
+    width: calc(100% - 80rpx);
+    height: 60rpx;
+}

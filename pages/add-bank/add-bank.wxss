@@ -1,0 +1,46 @@
+.list .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40rpx;
+}
+
+.list .item .title {
+    font-size: 28rpx;
+    color: #333333;
+    padding: 30rpx 0;
+}
+
+.list .item .ipt {
+    width: 383rpx;
+    height: 85rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.list .item .ipt-border {
+    border-bottom: 0;
+}
+
+.list .item .ipt input {
+    width: 100%;
+    font-size: 26rpx;
+    height: 100%;
+}
+
+.line-22 {
+    width: 100%;
+    height: 20rpx;
+    background: #F6F6F6;
+}
+
+.btn {
+    width: 440rpx;
+    height: 75rpx;
+    background: #FE7221;
+    border-radius: 38rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    margin-top: 210rpx;
+}

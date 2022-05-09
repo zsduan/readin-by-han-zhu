@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="top"></view>
+    <view class="book-list">
+        <view class="list" wx:if="{{bookList.length}}">
+            <book-item time="{{true}}" bookList="{{bookList}}" collect="{{true}}"></book-item>
+        </view>
+        <view class="empty" wx:else>
+            <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/K51dw1Zwt3z12LA32l2lzazJmT6Gyh.png"></image>
+        </view>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

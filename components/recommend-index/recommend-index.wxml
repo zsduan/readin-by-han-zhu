@@ -1,0 +1,72 @@
+<view class="page">
+    <view class="type" wx:for="{{typeList}}" wx:key="index">
+        <view class="type-top">
+            <view class="type-title">
+                <text class="name">{{item.name}}</text>
+                <view class="more" data-classId="{{item.article[0].class_id}}" bindtap="typeMore">
+                    <text>更多</text>
+                    <image src="../../static/img/row-right-index.png" class="img"></image>
+                </view>
+            </view>
+            <view class="top" data-classId="{{item.article[0].id}}" bindtap="typetopList"
+                wx:if="{{!item.is_curriculum}}">
+                <view class="imgwrop">
+                    <image src="{{imgSrc}}{{item.article[0].thumb}}" lazy-load wx:if="{{item.article[0].thumb}}"
+                        class="img">
+                    </image>
+                </view>
+                <view class="right">
+                    <view class="names">{{item.article[0].title}}</view>
+                    <view class="author">{{item.article[0].author}}</view>
+                    <view class="details">{{item.article[0].intro}}</view>
+                    <view class="right-bottom">
+                        <view class="read">
+                            <image src="../../static/img/paly-index.png" class="img"></image>
+                            <text class="reading">{{item.article[0].listening}}</text>
+                        </view>
+                        <view class="time">{{item.article[0].time}}上架</view>
+                    </view>
+                </view>
+            </view>
+            <view class="content" wx:if="{{!item.is_curriculum}}">
+                <view class="item" wx:for="{{item.article}}" data-classId="{{item.id}}" wx:key="index"
+                    wx:if="{{index !=0}}" bindtap="typeList">
+                    <view class="left">
+                        <image src="{{imgSrc}}{{item.thumb}}" lazy-load wx:if="{{item.thumb}}" class="img"></image>
+                    </view>
+                    <view class="rights">
+                        <view class="names">{{item.title}}</view>
+                        <view class="details">{{item.intro}}</view>
+                        <view class="read">
+                            <image src="../../static/img/paly-index.png" class="img"></image>
+                            <text class="reading">{{item.listening}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{item.is_curriculum}}">
+                <view class="top" wx:for="{{item.article}}" data-classId="{{item.id}}" bindtap="goCurriculum" wx:key="index">
+                    <view class="imgwrop">
+                        <image src="{{imgSrc}}{{item.thumb}}" lazy-load wx:if="{{item.thumb}}" class="img">
+                        </image>
+                        <image src="/static/img/empty-book.png" wx:else class="img"></image>
+                    </view>
+                    <view class="right">
+                        <view class="names">{{item.title}}</view>
+                        <view class="author">{{item.author}}</view>
+                        <view class="details">{{item.intro}}</view>
+                        <view class="right-bottom">
+                            <view class="read">
+                                <image src="../../static/img/paly-index.png" class="img"></image>
+                                <text class="reading">{{item.listening}}</text>
+                            </view>
+                            <view class="time">{{item.time}}上架</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+        <view class="line-20" wx:if="{{index != typeList.length - 1}}"></view>
+    </view>
+</view>

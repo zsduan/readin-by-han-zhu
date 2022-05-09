@@ -1,0 +1,192 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/28 上午9:54:27
+使用方法：
+在 D:\韩朱读书 -- 原生小程序\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\韩朱读书 -- 原生小程序\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="page">
+      <view class="search">
+        <view disabled="true" placeholder="请输入您想搜索的书籍" type="text" value="true" class="sk-image"></view>
+        <view class="searBtn">
+          <image class="sk-image"></image>
+        </view>
+      </view>
+      <view class="nav">
+        <view class="transverse">
+          <scroll-view class="list" scroll-x="true">
+            <view class="item active-item" data-index="0">
+              <text class="sk-transparent sk-text-14-2857-533 sk-text">推荐</text>
+              <view class="active-wrop">
+                <view class="active"></view>
+              </view>
+            </view>
+            <view class="item" data-index="1">
+              <text class="sk-transparent sk-text-14-2857-243 sk-text">心灵</text>
+            </view>
+            <view class="item" data-index="2">
+              <text class="sk-transparent sk-text-14-2857-405 sk-text">亲子</text>
+            </view>
+            <view class="item" data-index="3">
+              <text class="sk-transparent sk-text-14-2857-911 sk-text">财商</text>
+            </view>
+            <view class="item" data-index="4">
+              <text class="sk-transparent sk-text-14-2857-457 sk-text">营销</text>
+            </view>
+            <view class="item" data-index="5">
+              <text class="sk-transparent sk-text-14-2857-517 sk-text">课程</text>
+            </view>
+            <view class="item" data-index="6">
+              <text class="sk-transparent sk-text-14-2857-703 sk-text">故事汇</text>
+            </view>
+          </scroll-view>
+          <view class="down-selct">
+            <image class="sk-image"></image>
+          </view>
+        </view>
+      </view>
+      <swiper current="0" style="height:3642px;" autoplay="false">
+        <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+          <view class="list-item">
+            <view class="banner">
+              <swiper autoplay="false" circular="true" class="banner-wrop" interval="3000" next-margin="20rpx" previous-margin="20rpx" current="0">
+                <swiper-item class="item" data-index="0" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+                  <view class="imgwrop">
+                    <image class="sk-image"></image>
+                  </view>
+                </swiper-item>
+                <swiper-item class="item" data-index="4" style="position: absolute; width: 100%; height: 100%; transform: translate(-100%, 0px) translateZ(0px);">
+                  <view class="imgwrop">
+                    <image class="sk-image"></image>
+                  </view>
+                </swiper-item>
+              </swiper>
+            </view>
+            <view class="notice" data-id="8" style="border: none;">
+              <view class="imgwrop">
+                <image class="sk-image"></image>
+              </view>
+              <view class="right">
+                <view is="miniprogram_npm/@vant/weapp/notice-bar/index">
+                  <view class="van-notice van-notice-bar bar-index--van-notice-bar" style="color:#333;background:#fff">
+                    <view class="van-notice-bar__wrap bar-index--van-notice-bar__wrap">
+                      <view class="van-notice-bar__content bar-index--van-notice-bar__content sk-transparent sk-text-20-8333-333 sk-text" style=";transition:3500ms linear 1ms;transform:translateX(-70px);transition-property:transform;transform-origin:50% 50% 0;-webkit-transition:3500ms linear 1ms;-webkit-transform:translateX(-70px);-webkit-transition-property:transform;-webkit-transform-origin:50% 50% 0">
+                        致苹果用户
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="new-week">
+              <view class="title sk-transparent sk-text-8-3333-55 sk-text">本周上新</view>
+              <view class="bottom" data-classid="56">
+                <view class="left">
+                  <image lazy-load="true" class="sk-image"></image>
+                </view>
+                <view class="right">
+                  <view class="name sk-transparent sk-text-5-0000-51 sk-text">养育女孩</view>
+                  <view class="author sk-transparent sk-text-8-8235-975 sk-text">史蒂夫·比达尔夫</view>
+                  <view class="read">
+                    <image class="sk-image"></image>
+                    <text class="reading sk-transparent sk-text-0-0000-653 sk-text">2909</text>
+                  </view>
+                  <view class="details sk-transparent sk-text-7-8947-390 sk-text">女人、有女儿的父母必读书：如何培养一个强大的女孩？</view>
+                  <view class="reate">
+                    <view is="miniprogram_npm/@vant/weapp/rate/index">
+                      <view class="van-rate rate-index--van-rate ">
+                        <view class="van-rate__item rate-index--van-rate__item" style="padding-right: ">
+                          <view is="miniprogram_npm/@vant/weapp/icon/index" class="van-rate__icon rate-index--van-rate__icon" data-score="0" style="font-size: 18px">
+                            <view class="van-icon icon-index--van-icon van-icon-star icon-index--van-icon-star sk-pseudo sk-pseudo-circle" style="color:#F9B326"></view>
+                          </view>
+                        </view>
+                        <view class="van-rate__item rate-index--van-rate__item" style="padding-right: ">
+                          <view is="miniprogram_npm/@vant/weapp/icon/index" class="van-rate__icon rate-index--van-rate__icon" data-score="1" style="font-size: 18px">
+                            <view class="van-icon icon-index--van-icon van-icon-star icon-index--van-icon-star sk-pseudo sk-pseudo-circle" style="color:#F9B326"></view>
+                          </view>
+                        </view>
+                        <view class="van-rate__item rate-index--van-rate__item" style="padding-right: ">
+                          <view is="miniprogram_npm/@vant/weapp/icon/index" class="van-rate__icon rate-index--van-rate__icon" data-score="2" style="font-size: 18px">
+                            <view class="van-icon icon-index--van-icon van-icon-star icon-index--van-icon-star sk-pseudo sk-pseudo-circle" style="color:#F9B326"></view>
+                          </view>
+                        </view>
+                        <view class="van-rate__item rate-index--van-rate__item" style="padding-right: ">
+                          <view is="miniprogram_npm/@vant/weapp/icon/index" class="van-rate__icon rate-index--van-rate__icon" data-score="3" style="font-size: 18px">
+                            <view class="van-icon icon-index--van-icon van-icon-star icon-index--van-icon-star sk-pseudo sk-pseudo-circle" style="color:#F9B326"></view>
+                          </view>
+                        </view>
+                        <view class="van-rate__item rate-index--van-rate__item" style="padding-right: ">
+                          <view is="miniprogram_npm/@vant/weapp/icon/index" class="van-rate__icon rate-index--van-rate__icon" data-score="4" style="font-size: 18px">
+                            <view class="van-icon icon-index--van-icon van-icon-star icon-index--van-icon-star sk-pseudo sk-pseudo-circle" style="color:#F9B326"></view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="history-list">
+              <view is="components/history/history">
+                <view class="history--history">
+                  <view class="history--history-title">
+                    <text class="history--name sk-transparent sk-text-8-3333-425 sk-text">历史学习</text>
+                    <view class="history--more">
+                      <text class="sk-transparent sk-text-15-7895-973 sk-text" style="background-position-x: 50%;">更多</text>
+                      <image class="history--img sk-image"></image>
+                    </view>
+                  </view>
+                  <view class="history--content">
+                    <scroll-view class="history--list" scroll-x="true">
+                      <view class="history--item" data-id="53" style="border: none;">
+                        <view class="history--imgwrop history--fl">
+                          <image class="history--img sk-image"></image>
+                        </view>
+                        <view class="history--right history--fr">
+                          <view class="history--name sk-transparent sk-text-14-2857-165 sk-text">干法</view>
+                          <view class="history--details sk-transparent sk-text-15-7895-617 sk-text">稻盛和夫的“工作哲学”，提升心性、磨练灵魂的核心法门。</view>
+                          <view class="history--circle">
+                            <view class="history--floor">
+                              <view class="history--top sk-image" style="width : 67px;"></view>
+                            </view>
+                            <view class="history--num sk-transparent sk-text-10-7143-38 sk-text">57%</view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class="history--item" data-id="52" style="border: none;">
+                        <view class="history--imgwrop history--fl">
+                          <image class="history--img sk-image"></image>
+                        </view>
+                        <view class="history--right history--fr">
+                          <view class="history--name sk-transparent sk-text-14-2857-196 sk-text">男人来自火星，女人来自金星</view>
+                          <view class="history--details sk-transparent sk-text-15-7895-472 sk-text">一部教你区分男女细致差别、和伴侣相处的“两性圣经”</view>
+                          <view class="history--circle">
+                            <view class="history--floor">
+                              <view class="history--top sk-image" style="width : 89px;"></view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </scroll-view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,154 @@
+.page{
+    background: #202028;
+}
+.page image {
+    width: 100%;
+    display: block;
+}
+
+
+.content {
+    position: relative;
+}
+
+.content .list {
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    bottom: 120rpx;
+    width: 606rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content .list .item {
+    width: 182rpx;
+    height: 317rpx;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 6rpx;
+    overflow: hidden;
+}
+
+.content .list .item .title {
+    font-size: 28rpx;
+    color: #333333;
+    text-align: center;
+    padding-top: 17rpx;
+}
+
+.content .list .item image {
+    width: 182rpx;
+    height: 255rpx;
+}
+
+.content .list .item .paly {
+    width: 98rpx;
+    height: 98rpx;
+    background: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.content .imgwrop {
+    position: relative;
+}
+
+.content .list .item .paly image {
+    width: 98rpx;
+    height: 98rpx;
+}
+
+.vip-wrop{
+    position: fixed;
+    bottom: 0;
+    padding: 20rpx 30rpx;
+    width: calc(100% - 60rpx);
+    background: #33333D;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vip-wrop image{
+    height: 70rpx;
+}
+
+.vip-wrop .left image{
+    width: 231rpx;
+}
+
+.vip-wrop .right{
+    display: flex;
+}
+
+.vip-wrop .right .openVip{
+    width: 171rpx;
+}
+.vip-wrop .right .freeVip{
+    width: 244rpx;
+}
+
+.pup-wrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 10;
+}
+
+.pup-wrop .pup {
+    padding-top: 48rpx;
+    width: 548rpx;
+    height: calc(342rpx - 48rpx);
+    background: #FFFFFF;
+    border-radius: 12rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pup-wrop .title {
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000000;
+}
+
+.pup-wrop .content {
+    border-bottom: #E5E5E5 1px solid;
+    margin: 0 47rpx;
+    padding-bottom: 10rpx;
+    padding-top: 55rpx;
+}
+
+.pup-wrop .bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: #E5E5E5 1px solid;
+    margin-top: 49rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.pup-wrop .bottom view {
+    width: 50%;
+    text-align: center;
+}
+
+.pup-wrop .bottom .cancel {
+    border-right: #E5E5E5 1px solid;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.pup-wrop .bottom .determine {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #FE7221;
+}

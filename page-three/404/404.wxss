@@ -1,0 +1,31 @@
+.page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.wrop {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.wrop image {
+  width: 550rpx;
+}
+
+.wrop .btn {
+  width: 254rpx;
+  height: 75rpx;
+  border: 1rpx solid #FE7221;
+  box-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.16);
+  border-radius: 38rpx;
+  text-align: center;
+  line-height: 75rpx;
+  color: #FE7221;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}

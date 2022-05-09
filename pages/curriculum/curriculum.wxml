@@ -1,0 +1,93 @@
+<view class="page">
+    <!-- 顶部提示 -->
+    <view class="top-tips" wx:if="{{!is_vip}}">
+        <top-notice tips="{{top_tips}}" show_vip="{{true}}" show_btn="{{true}}" pageUrls="{{pageUrls}}" bindopenExchange="openExchange"></top-notice>
+    </view>
+    <!-- 书籍介绍 -->
+    <view class="top-wrop">
+        <view class="top">
+            <view class="left" wx:if="{{bookInfo.thumb}}">
+                <image src="{{imgSrc}}{{bookInfo.thumb}}"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{bookInfo.title}}</view>
+                <view class="author">{{bookInfo.author}}</view>
+                <view class="intro">{{bookInfo.intro}}</view>
+                <view class="read-time">
+                    <view class="read">
+                        <image src="../../static/img/paly-index.png" class="read-img"></image>
+                        <text class="reading">{{listing}}</text>
+                    </view>
+                    <view class="time">
+                        {{bookInfo.time}}
+                    </view>
+                </view>
+                <view class="btn" bindtap="payNow">
+                    <image src="../../static/img/paly-curriculum.png"></image>
+                    <text>立即播放</text>
+                </view>
+            </view>
+        </view>
+        <view class="buy" bindtap="openBuy" wx:if="{{!is_ios && !is_vip}}">
+            <image src="../../static/img/buy-curriculum-index.png"></image>
+            <view class="all-price-wrop"><text class="all-price">{{all_price}}</text>元购买，随心畅听</view>
+        </view>
+        <view class="buy" bindtap="openExchange" wx:if="{{is_ios && !is_vip}}">
+            <image src="../../static/img/bexchange-curriculum-index.png"></image>
+            <view class="all-price-wrop">会员用户，免费畅听全集</view>
+        </view>
+        <view class="continue-playing" wx:if="{{is_vip}}">
+            <view class="left">
+                <view class="imgWrop">
+                    <image src="../../static/img/curriculum-history.png"></image>
+                </view>
+                <view class="continue-playing-num">上次学习到{{bookInfo.title}}_第{{episodes}}集</view>
+            </view>
+            <view class="btns" bindtap="continuePlaying">{{paly_text}}</view>
+        </view>
+    </view>
+    <view class="details-wrop">
+        <view class="list-title">
+            <view class="name">课程选集</view>
+            <view class="right" wx:if="{{!is_vip}}">单集分享注册3人，免费畅听单集</view>
+            <view class="right" wx:else>此课程共{{curriculumList.length}}集</view>
+        </view>
+        <view class="list">
+            <view class="item" wx:for="{{curriculumList}}" wx:key="index" data-id="{{item.id}}" bindtap="goDetails">
+                <view class="left">
+                    <view class="top">
+                        <text class="name">第{{index + 1}}集_{{item.title}}</text>
+                        <text class="tips" wx:if="{{item.type == 0}}">免费</text>
+                        <text class="tips" wx:if="{{item.type == 1}}">付费</text>
+                    </view>
+                    <view class="bottom">
+                        <view class="bottom-left">
+                            <image src="../../static/img/paly-index.png"></image>
+                            <text>{{item.listening}}</text>
+                        </view>
+                        <view class="bottom-right">
+                            <text wx:if="{{!is_vip}}">分享：{{item.share_user}}/3</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="right">
+                    <image src="../../static/img/curriculum-paly.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="empty">没有更多数据啦~~</view>
+    <!-- 购买弹窗 -->
+    <block>
+        <buy-curriculum curriculum="{{curriculumList}}" total_price="{{all_price}}" show="{{buy_show}}"
+            title="{{bookInfo.title}}" curriculum_id="{{curriculum_id}}" pageUrls="{{pageUrls}}"></buy-curriculum>
+    </block>
+    <!-- 兑换弹窗 -->
+    <block>
+        <exchange-pup is_exchange="{{is_exchange}}"></exchange-pup>
+    </block>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

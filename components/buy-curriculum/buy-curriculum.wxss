@@ -1,0 +1,219 @@
+.top-wrop {
+    text-align: center;
+    position: relative;
+    padding: 30rpx 0;
+    font-size: 34rpx;
+    color: #333333;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.top-wrop .img {
+    width: 28rpx;
+    height: 28rpx;
+    position: absolute;
+    right: 43rpx;
+    top: 35rpx;
+}
+
+.sum {
+    font-size: 26rpx;
+    color: #333333;
+    padding: 0 30rpx;
+    padding-bottom: 20rpx;
+}
+
+.nav {
+    padding: 0 30rpx;
+    display: flex;
+}
+
+.nav .item {
+    height: 62rpx;
+    border: 1px solid #cdcdcd;
+    border-radius: 6rpx;
+    line-height: 62rpx;
+    padding: 0 16rpx;
+    margin-right: 30rpx;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.nav .item-active {
+    color: #FE7221;
+    border: 1px solid #FE7221;
+}
+
+.nav .item:last-child {
+    margin-right: 0;
+}
+
+.all {
+    padding-top: 86rpx;
+}
+
+.all .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15rpx 30rpx;
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.all .item .row-img {
+    width: 17rpx;
+    height: 17rpx;
+}
+
+.all .item .right {
+    display: flex;
+    align-items: center;
+}
+
+.all .item .right .tips {
+    font-size: 28rpx;
+    color: #FE7221;
+    display: inline-block;
+    padding-right: 7rpx;
+}
+
+.all .item .right .price {
+    display: inline-block;
+    padding-right: 20rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #FE7221;
+}
+
+.all .item .right .left-weixin {
+    height: 31rpx;
+    padding-right: 10rpx;
+}
+
+.all .item .right-name {
+    color: #666666;
+}
+
+.all .item .weixin {
+    width: 38rpx;
+    height: 31rpx;
+}
+
+.all .empty {
+    width: 100%;
+    height: 260rpx;
+}
+
+.important-tips {
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.buy-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 30rpx;
+    margin-top: 32rpx;
+}
+
+.buy-bottom .price-wrop {
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.buy-bottom .price-wrop .price {
+    font-size: 28rpx;
+    color: #FE7221;
+}
+
+.buy-bottom .price-wrop .price .all_price {
+    font-size: 38rpx;
+    font-weight: bold;
+}
+
+.buy-bottom .btn {
+    width: 232rpx;
+    height: 78rpx;
+    background: #FE7221;
+    border-radius: 39rpx;
+    text-align: center;
+    line-height: 78rpx;
+    font-size: 36rpx;
+    color: #FFFFFF;
+}
+
+.buy-bottom .btn-empty {
+    background: #ccc;
+}
+
+.list {
+    padding: 0 30rpx;
+    padding-top: 40rpx;
+}
+
+.list .list-title {
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.list .item-wrop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list .item-wrop .item {
+    width: 90rpx;
+    height: 70rpx;
+    font-size: 30rpx;
+    color: #999999;
+    background: #F9F9F9;
+    border: 1px solid #cdcdcd;
+    border-radius: 6rpx;
+    text-align: center;
+    line-height: 70rpx;
+    margin-right: 24rpx;
+    margin-top: 20rpx;
+    position: relative;
+}
+
+.list .item-wrop .item-active {
+    background: #FE7221;
+    color: #fff;
+    border: 1px solid #FE7221;
+}
+
+.list .item-wrop .item:nth-child(6n) {
+    margin-right: 0;
+}
+
+.list .tips {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20rpx;
+    color: #FFFFFF;
+    width: 42rpx;
+    height: 24rpx;
+    background: #FE7221;
+    border-radius: 0rpx 6rpx 0rpx 0rpx;
+    text-align: center;
+    line-height: 24rpx;
+}
+
+.list .tips-purchased {
+    background: #CCCCCC;
+}
+
+.list .item-wrop .clearBorder{
+    border: 0;
+    height: 74rpx;
+    width: 94rpx;
+}

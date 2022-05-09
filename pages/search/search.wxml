@@ -1,0 +1,57 @@
+<!-- 搜索栏 -->
+<view class="search">
+    <input type="text" placeholder="{{placeholder}}" bindinput="bindKeyInput" bindconfirm="search" bindfocus="getFocus"
+        value="{{searValue}}" focus="{{is_focus}}" />
+    <view class="searBtn" bindtap="search">
+        <image src="../../static/img/search.png"></image>
+    </view>
+</view>
+
+<!-- 热搜 -->
+<view class="hot-search" wx:if="{{is_hotList && hotList.length}}">
+    <view class="title">热搜</view>
+    <view class="content">
+        <view class="item" wx:for="{{hotList}}" wx:key='index' wx:if="{{index < 10}}">
+            <text class="key-id">{{index + 1}}</text>
+            <text class="key-word" bindtap="hotClick" data-keyword="{{item.keyword}}">{{item.keyword}}</text>
+            <image src="../../static/img/fire.png" wx:if="{{index < 3}}"></image>
+        </view>
+    </view>
+</view>
+
+<!-- 历史记录 -->
+<view class="history" wx:if="{{is_history}}">
+    <view class="title">
+        <view class="name">历史记录</view>
+        <view class="open" bindtap="openMore">{{open_text}}</view>
+    </view>
+    <view class="clear" wx:if="{{!historic_records.length}}">暂无历史搜索记录</view>
+    <view class="content {{!is_open ? 'content-heigth' : ''}}">
+        <view class="item" wx:for="{{historic_records}}" wx:key="index" data-item="{{item}}" bindtap="historyClick"
+            bindlongpress="longTach" data-index="{{index}}">
+            <view class="{{is_x_show && index == xIndex ? 'left2' : 'left1'}}">{{item}} </view>
+            <view class="right" wx:if="{{is_x_show && index == xIndex}}" catchtap="onlyDelete" data-index="{{index}}">
+                <van-icon name="cross" color="#333333" size="12px" />
+            </view>
+        </view>
+    </view>
+    <view class="clear" bindtap="openTips" wx:if="{{historic_records.length}}">
+        <image src="../../static/img/clear.png"></image>
+        <text>清空历史记录</text>
+    </view>
+</view>
+
+<!-- 展示数据 -->
+<view class="list" wx:else>
+    <view wx:if="{{bookList.length}}">
+        <book-item bookList="{{bookList}}" time="{{true}}"></book-item>
+    </view>
+    <view class="tips" wx:else>
+        换个关键词试试~~
+    </view>
+</view>
+
+<!-- 底部播放 -->
+<view class="bottom-play" wx:if="{{is_bootom_paly}}">
+    <paly-bottom></paly-bottom>
+</view>

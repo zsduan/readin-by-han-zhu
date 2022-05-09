@@ -1,0 +1,134 @@
+.buy {
+    position: relative;
+    height: 81rpx;
+    padding: 0 40rpx;
+    padding-top: 20rpx;
+}
+
+.buy .all-price {
+    color: #81571F;
+    font-weight: bold;
+}
+
+.buy .img {
+    height: 81rpx;
+    width: 100%;
+}
+
+.buy .all-price-wrop {
+    position: absolute;
+    top: 41rpx;
+    left: 116rpx;
+    z-index: 10;
+    font-size: 30rpx;
+    color: #81571F;
+    display: flex;
+}
+
+.title-wrop {
+    padding: 0 40rpx;
+    padding-top: 41rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-wrop .title {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.title-wrop .right {
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.list {
+    white-space: nowrap;
+    width: calc(100% - 80rpx);
+    padding: 30rpx 40rpx;
+}
+
+.list .item {
+    display: inline-block;
+    width: 210rpx;
+    height: 110rpx;
+    background: #FFFFFF;
+    border: 1px solid #cecece;
+    border-radius: 8rpx;
+    margin-right: 20rpx;
+    padding: 10rpx 20rpx;
+    position: relative;
+}
+
+.list .item-active {
+    border: 1px solid #FE7221;
+
+}
+
+.list .item-active .title {
+    color: #FE7221 !important;
+}
+
+.list .item-active .name {
+    color: #FE7221 !important;
+}
+
+.list .item .title {
+    font-size: 26rpx;
+    color: #333333;
+}
+
+.list .item .share {
+    font-size: 24rpx;
+    color: #999999;
+    height: 31rpx;
+}
+
+.list .item .name {
+    font-size: 30rpx;
+    color: #333333;
+    padding-top: 4rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.list .item .tips {
+    width: 62rpx;
+    height: 34rpx;
+    background: #FE7221;
+    border-radius: 0rpx 8rpx 0rpx 8rpx;
+    font-size: 24rpx;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 34rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tips-wrop {
+    font-size: 26rpx;
+    color: #999999;
+    padding:  0 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tips-wrop .btn{
+    width: 151rpx;
+    height: 38rpx;
+    border: 1rpx solid #FE7221;
+    border-radius: 19rpx;
+    text-align: center;
+    line-height: 38rpx;
+    font-size: 24rpx;
+    color: #FE7221;
+}

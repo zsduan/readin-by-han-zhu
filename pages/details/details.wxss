@@ -1,0 +1,604 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .item {
+    width: 50%;
+    text-align: center;
+    padding: 10rpx 0;
+    font-size: 30rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #666666;
+    position: relative;
+}
+
+.nav .active {
+    font-size: 38rpx;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+}
+
+.nav .line {
+    position: absolute;
+    left: 46%;
+    margin-top: 6rpx;
+    width: 30rpx;
+    height: 8rpx;
+    background: #F16E22;
+    border-radius: 6rpx;
+}
+
+.top-wrop .music-video {
+    height: 399rpx;
+}
+
+.top-wrop .music-video-active {
+    height: 475rpx;
+}
+
+.top-wrop .music {
+    height: 422rpx;
+    width: 100%;
+    /* background: #ddd; */
+    position: relative;
+}
+
+.top-wrop .music .current_time {
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-size: 24rpx; */
+    font-size: 32rpx;
+    /* background: rgba(0, 0, 0, 0.35); */
+    background: rgba(0, 0, 0, 0.7);
+    /* padding: 10rpx; */
+    padding: 15rpx;
+    border-radius: 4rpx;
+}
+
+
+.top-wrop .music .back image {
+    width: 100%;
+    height: 422rpx;
+    filter: blur(7px);
+}
+
+.top-wrop .center-wrop {
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+}
+
+.top-wrop .music-center {
+    width: 281rpx;
+    height: 281rpx;
+    border-radius: 50%;
+    background: #ddd;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.top-wrop .music-center-active {
+    top: 14%;
+    left: 31.5%;
+}
+
+.top-wrop .music-center .play {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.top-wrop .music-center .play image {
+    width: 105rpx;
+    height: 120rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 课程 */
+
+.top-wrop .music-center-curriculum {
+    width: 220rrpx;
+    height: 220rpx;
+    border-radius: 50%;
+}
+
+.top-wrop .music-center-bottom {
+    width: 264rpx;
+    height: 264rpx;
+    /* background: #FFEEE5; */
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.top-wrop .previous image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.top-wrop .previous {
+    position: absolute;
+    top: 47%;
+    left: 80rpx;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.top-wrop .next {
+    position: absolute;
+    top: 47%;
+    right: 80rpx;
+    transform: translateY(-50%);
+}
+
+.top-wrop .music-center-curriculum-active {
+    top: 21%;
+    left: 35.2%;
+}
+
+.top-wrop .next image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+/* 课程结束 */
+
+
+/* 顶部空白开始 */
+.content {
+    position: relative;
+}
+
+.content-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #000;
+    z-index: 10;
+}
+
+.content-top .top-tips-wrop {
+    padding-top: 112rpx;
+}
+
+.content-top .top-tips {
+    color: #fff;
+    font-size: 34rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content-top .btn-wrop {
+    display: flex;
+    padding-top: 47rpx;
+    position: relative;
+}
+
+.content-top .btn-wrop .btn {
+    width: 190rpx;
+    height: 60rpx;
+    background: #FE7221;
+    border-radius: 39rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    line-height: 60rpx;
+    text-align: center;
+}
+
+.content-top .btn-wrop .btn-share {
+    margin-left: 173rpx;
+    margin-right: 25rpx;
+}
+
+.content-top .btn-wrop .btns {
+    position: absolute;
+    opacity: 0;
+}
+
+/* 顶部空白结束 */
+.top-wrop .video {
+    width: 100%;
+    position: relative;
+}
+
+.top-wrop .hidden {
+    display: none;
+}
+
+.top-wrop .video video {
+    width: 100%;
+}
+
+.top-wrop .video .hidden {
+    display: none;
+}
+
+.top-wrop .video-tips {
+    position: absolute;
+    bottom: 100rpx;
+    left: 0rpx;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0rpx 25rpx 25rpx 0rpx;
+    padding: 7rpx 20rpx;
+    width: 430rpx;
+    font-size: 28rpx;
+    height: 40rpx;
+}
+
+.top-wrop .video-tips .tips {
+    position: absolute;
+    top: 24rpx;
+}
+
+.top-wrop .video-tips-show {
+    bottom: -120rpx;
+}
+
+.top-wrop .video-tips .change {
+    color: #FE7221;
+    text-decoration: underline;
+    position: absolute;
+    top: 24rpx;
+    right: 46rpx;
+}
+
+.top-wrop .video-tips .imgwrop {
+    position: absolute;
+    top: 10rpx;
+    right: 20rpx;
+}
+
+.top-wrop .video-tips .img {
+    width: 18rpx;
+    height: 30rpx;
+}
+
+.top-wrop .video .progress-video {
+    height: 80rpx;
+    width: calc(100% - 80rpx);
+    position: absolute;
+    bottom: 0;
+    padding: 0 40rpx;
+    display: flex;
+    justify-items: center;
+    line-height: 80rpx;
+}
+
+.top-wrop .video-multiple {
+    position: absolute;
+    top: 30rpx;
+    color: #fff;
+    right: 20rpx;
+    font-size: 28rpx;
+    z-index: 10;
+    width: 80rpx;
+}
+
+.top-wrop .video-multiple .title {
+    border: 1px solid #fff;
+    width: 66rpx;
+    height: 20rpx;
+    padding-top: 16rpx;
+    text-align: center;
+}
+
+.top-wrop .video .multiple-list {
+    position: absolute;
+    top: 40rpx;
+    text-align: center;
+    width: 80rpx;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: -10rpx;
+    color: #fff;
+    z-index: 10;
+}
+
+.top-wrop .video .multiple-list .item {
+    padding: 20rpx 0;
+}
+
+.top-wrop .video .multiple-list .active {
+    color: #FE7221;
+}
+
+.top-wrop .video .progress-video .play-video {
+    width: 40rpx;
+}
+
+.top-wrop .video .progress-video .play-video image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.top-wrop .video .progress-video .foor {
+    width: 400rpx;
+    height: 10rpx;
+    background: #EBEBEB;
+    border-radius: 6rpx;
+    margin-left: 10rpx;
+    margin-top: 35rpx;
+    position: relative;
+}
+
+.top-wrop .video .progress-video .top {
+    position: absolute;
+    left: 0;
+    background: #FF8640;
+    top: 0;
+    height: 10rpx;
+    border-radius: 6rpx;
+}
+
+.top-wrop .video .progress-video .circular {
+    width: 26rpx;
+    height: 26rpx;
+    background: #FF8640;
+    border-radius: 50%;
+    position: absolute;
+    top: -10rpx;
+    z-index: 10;
+}
+
+.top-wrop .video .progress-video .time {
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    color: #fff;
+}
+
+.top-wrop .video .progress-video .full_screen {
+    font-size: 24rpx;
+    padding-left: 10rpx;
+    color: #fff;
+}
+
+.progress {
+    width: calc(100% - 60rpx);
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.progress .floor {
+    position: relative;
+    width: 502rpx;
+    height: 9rpx;
+    background: #F1F1F1;
+    border: 1rpx solid #EBEBEB;
+    border-radius: 28rpx;
+}
+
+.progress .top {
+    height: 9rpx;
+    background: #FC9356;
+    border-radius: 28rpx;
+}
+
+.progress .time-wrop {
+    font-size: 24rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    line-height: 26rpx;
+    color: #333333;
+    padding-left: 10rpx;
+}
+
+.progress .floor .circular {
+    width: 26rpx;
+    height: 26rpx;
+    background: #FF8640;
+    border-radius: 50%;
+    position: absolute;
+    top: -10rpx;
+    z-index: 10;
+}
+
+.progress .multiple {
+    font-size: 24rpx;
+    position: relative;
+}
+
+.progress .multiple-list {
+    position: absolute;
+    bottom: 70rpx;
+    text-align: center;
+    width: 120rpx;
+    background: #FFFFFF;
+    box-shadow: -1px 4rpx 8rpx rgba(0, 0, 0, 0.2);
+    border-radius: 10rpx;
+}
+
+.progress .multiple-list .item {
+    height: 60rpx;
+    font-size: 28rpx;
+    line-height: 60rpx;
+}
+
+.progress .multiple-list .active {
+    color: #FE7221;
+}
+
+.progress .multiple .title {
+    width: 76rpx;
+    height: 31rpx;
+    border: 1px solid #FE7221;
+    border-radius: 50rpx;
+    text-align: center;
+    line-height: 31rpx;
+    margin-left: 20rpx;
+    color: #FE7221;
+    font-size: 24rpx;
+
+}
+
+.progress .progress-line {
+    height: 76rpx;
+    position: relative;
+}
+
+.progress .progress-line .slider {
+    width: 370rpx;
+    /* width: 467rpx; */
+    height: 9rpx;
+}
+
+.progress .progress-line .slider-tiyan {
+    opacity: 0;
+}
+
+
+.lines {
+    padding: 20rpx 40rpx;
+}
+
+.progress-line-top {
+    position: absolute;
+    top: 0rpx;
+    /* z-index: 99; */
+}
+
+.progress-line-top .slider {
+    width: 400rpx;
+    height: 9rpx;
+}
+
+.bottom-nav {
+    font-size: 30rpx;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    font-family: Microsoft YaHei;
+    height: 70rpx;
+    box-shadow: 15rpx 6rpx 10rpx rgba(0, 0, 0, 0.06);
+}
+
+.bottom-nav-active {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 10;
+}
+
+.bottom-nav .item {
+    width: 50%;
+    text-align: center;
+}
+
+.bottom-nav .active {
+    font-size: 32rpx;
+    color: #F16E22;
+}
+
+.more-recommend {
+    width: calc(100% - 80rpx);
+    padding: 0 40rpx;
+}
+
+.fiexd-active {
+    padding-top: 70rpx;
+}
+
+.comment {
+    padding-bottom: 120rpx;
+}
+
+.publish {
+    position: fixed;
+    bottom: 0rpx;
+    padding: 21rpx 40rpx;
+    background: #fff;
+    width: calc(100% - 80rpx);
+    padding-bottom: 40rpx;
+}
+
+.publish .wrop {
+    background: #F5F5F5;
+    display: flex;
+    border-radius: 28rpx;
+    overflow: hidden;
+}
+
+.publish input {
+    width: 486rpx;
+    height: 70rpx;
+    border-radius: 20rpx;
+    padding-left: 25rpx;
+    font-size: 28rpx;
+}
+
+.publish .btn {
+    font-size: 28rpx;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #FFFFFF;
+    width: 140rpx;
+    height: 70rpx;
+    background: linear-gradient(50deg, #F16E22 0%, #FF9F67 100%);
+    border-radius: 40rpx;
+    line-height: 70rpx;
+    text-align: center;
+    margin-left: 20rpx;
+}
+
+/* 旋转 */
+.Rotation {
+    /* -webkit-transform: rotate(360deg); */
+    animation: rotation 5s linear infinite;
+    -moz-animation: rotation 5s linear infinite;
+    -webkit-animation: rotation 5s linear infinite;
+    -o-animation: rotation 5s linear infinite;
+}
+
+/* 图片转圈 */
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* 弹出框1 */
+@keyframes up {
+    0% {
+        height: 0rpx;
+    }
+
+    50% {
+        height: 55rpx;
+    }
+
+    70% {
+        height: 77rpx;
+    }
+
+    100% {
+        height: 110rpx;
+    }
+}

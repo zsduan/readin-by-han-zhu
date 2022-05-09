@@ -1,0 +1,288 @@
+.header {
+    padding: 50rpx 40rpx;
+    display: flex;
+}
+
+.header .icon {
+    width: 140rpx;
+    height: 140rpx;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header .icon image {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.header .right {
+    padding-left: 30rpx;
+}
+
+.header .right .name {
+    font-size: 30rpx;
+    color: #333333;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.header .right .tel {
+    font-size: 26rpx;
+    color: #999999;
+    margin-top: 20rpx;
+}
+
+.header .right .tel text {
+    display: inline-block;
+    padding-left: 10rpx;
+}
+
+.header .right .address {
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.header .right .address text {
+    display: inline-block;
+    padding-left: 10rpx;
+}
+
+.header .right .address image {
+    width: 21rpx;
+}
+
+.header .right image {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.nav {
+    height: 101rpx;
+    background: #F6F6F6;
+    box-shadow: 0px -4rpx 10rpx rgba(0, 0, 0, 0.04);
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+    display: flex;
+    justify-content: space-between;
+    line-height: 101rpx;
+}
+
+.nav .item {
+    width: calc(50% - 78rpx);
+    text-align: center;
+    position: relative;
+    font-size: 30rpx;
+    color: #666;
+    padding-left: 78rpx;
+}
+
+.nav .last-item {
+    padding-left: 0 !important;
+    width: 50%;
+}
+
+
+.nav .item .line {
+    width: 30rpx;
+    height: 8rpx;
+    background: #F16E22;
+    border-radius: 7rpx;
+    position: absolute;
+    bottom: 0;
+    left: 56%;
+    transform: translateX(-50%);
+}
+
+.nav .item .last-line {
+    left: 50%;
+}
+
+.nav .active {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.user-list .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx 50rpx;
+}
+
+.user-list .left {
+    display: flex;
+}
+
+.user-list .left .name-time {
+    padding-left: 20rpx;
+}
+
+.user-list .left .name-time .name {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.user-list .left .name-time .time {
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.user-list .icon {
+    width: 80rpx;
+    height: 80rpx;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-list .icon image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.user-list .right image {
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.user-list .right text {
+    font-size: 26rpx;
+    color: #333333;
+    display: inline-block;
+    padding-right: 21rpx;
+}
+
+.user-list .wrop {
+    background: #F6F6F6;
+    border-radius: 20px;
+    margin: 0 50rpx;
+}
+
+.user-list .wrop .two {
+    padding: 40rpx;
+}
+
+.btns {
+    position: fixed;
+    bottom: 60rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.empty{
+    text-align: center;
+    padding-top: 133rpx;
+}
+
+.empty image{
+    width: 441rpx;
+}
+
+.btns button {
+    width: 400rpx;
+    height: 75rpx;
+    background: #FE7221;
+    box-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.16);
+    border-radius: 38rpx;
+    line-height: 75rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+}
+
+.headers {
+    padding: 50rpx 40rpx;
+    text-align: center;
+}
+
+.headers .icon {
+    width: 140rpx;
+    height: 140rpx;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+}
+
+.headers .icon image {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.headers .right {
+    padding-left: 30rpx;
+}
+
+.headers .right .name {
+    font-size: 30rpx;
+    color: #333333;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.navs {
+    height: 101rpx;
+    background: #F6F6F6;
+    box-shadow: 0px -4rpx 10rpx rgba(0, 0, 0, 0.04);
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+    text-align: center;
+    line-height: 101rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navs .item {
+    width: calc(50% - 78rpx);
+    text-align: center;
+    position: relative;
+    font-size: 30rpx;
+    color: #666;
+    padding-left: 78rpx;
+}
+
+.navs .last-item {
+    padding-left: 0 !important;
+    width: 50%;
+}
+
+
+.navs .item .line {
+    width: 30rpx;
+    height: 8rpx;
+    background: #F16E22;
+    border-radius: 7rpx;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navs .item .last-line {
+    left: 38%;
+}
+
+.navs .active {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.emptys{
+    text-align: center;
+    color: #999;
+    font-size: 30rpx;
+    padding-top: 30rpx;
+}
+

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "color-picker": "/components/color-picker/color-picker"
+  },
+  "navigationBarTitleText": "排行榜分享图"
+}

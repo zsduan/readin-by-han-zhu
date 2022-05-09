@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "exchange-pup" : "../exchange-pup/exchange-pup"
+    }
+}

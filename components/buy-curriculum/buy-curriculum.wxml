@@ -1,0 +1,73 @@
+<view class="page">
+    <van-popup show="{{ show }}" round position="bottom" bind:close="closePup">
+        <view class="top-wrop">
+            <view class="title">《{{title}}》</view>
+            <view class="close" bindtap="closePup">
+                <image src="../../static/img/close.png" class="img"></image>
+            </view>
+        </view>
+        <view class="sum">本课程共{{curriculum.length}}集</view>
+        <view class="nav">
+            <view class="item {{item.active ? 'item-active' : ''}}" data-index="{{index}}" wx:for="{{navList}}" wx:key="index" bindtap="changeNav">
+                {{item.title}}
+            </view>
+        </view>
+        <!-- 单集选择 -->
+        <view class="list" wx:if="{{!is_all}}">
+            <view class="list-title">购买选集</view>
+            <view  class="item-wrop">
+                <view class="item {{item.active ? 'item-active' : ''}} {{item.type != 1 ? 'clearBorder':''}}" wx:for="{{curriculum}}" wx:key="index" data-index="{{index}}" bindtap="Anthology">
+                    <text>{{index + 1}}</text>
+                    <view class="tips" wx:if="{{item.type == 0}}">免费</view>
+                    <view class="tips tips-purchased" wx:if="{{item.type == -1}}">已购</view>
+                </view>
+            </view>
+        </view>
+        <!-- 公共计算 -->
+        <view class="all" >
+            <view class="item" wx:if="{{!is_all}}">
+                <view class="name" >单集价格</view>
+                <view class="name">{{Unit_Price != '0.00' || navList[1].active ? '￥' + Unit_Price : "还未选择集数"}}</view>
+            </view>
+            <view class="item" wx:if="{{!is_all}}">
+                <view class="name">数量</view>
+                <view class="name">{{sumNum}}</view>
+            </view>
+            <view class="item" bindtap="goVipDetails">
+                <view class="name">价格</view>
+                <view class="right">
+                    <text class="tips" wx:if="{{all_price != '0.00' || navList[1].active}}">￥<text class="price" >{{all_price}}</text>开通会员免费畅听</text>
+                    <text class="tips" wx:else>￥<text class="price">{{total_price}}</text>开通会员免费畅听</text>
+                    <view class="right-row">
+                        <image src="../../static/img/row-buy.png" class="row-img"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="name">支付方式</view>
+                <view class="right">
+                    <view class="left-weixin">
+                        <image src="../../static/img/weixin-code.png" class="weixin"></image>
+                    </view>
+                    <text class="right-name">微信支付</text>
+                </view>
+            </view>
+            <view class="empty" wx:if="{{is_all}}"></view>
+            <view class="important-tips">
+                购买说明：
+            </view>
+            <view class="important-tips">
+                数字阅读作品购买成功后不可退回。
+            </view>
+        </view>
+        <view class="buy-bottom">
+            <view class="price-wrop">
+                <text>应付金额：</text>
+                <text class="price" wx:if="{{all_price != '0.00' || navList[1].active}}">￥<text class="all_price" >{{all_price}}</text></text>
+                <text class="price" wx:else>￥<text class="all_price" >{{total_price}}</text></text>
+            </view>
+            <view class="btn" wx:if="{{all_price != '0.00' || navList[0].active}}" bindtap="pay">支付</view>
+            <view class="btn btn-empty" wx:else bindtap="EmptyPay">支付</view>
+        </view>
+    </van-popup>
+</view>

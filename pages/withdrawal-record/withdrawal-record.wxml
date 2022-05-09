@@ -1,0 +1,53 @@
+<!--pages/tixain/tixian.wxml-->
+<view class="page">
+  <view class="box" wx:if="{{getWithdrawal.length}}">
+    <view class="main" wx:for="{{getWithdrawal}}" wx:for-index="idx" wx:for-item="item" wx:key='index'>
+      <view class="list">
+        <text class="item money"> 提现金额</text>
+        <block>
+          <text class="item left " wx:if="{{item.status==0}}">提现中</text>
+          <text class="item right" wx:elif="{{item.status==2}}">提现失败</text>
+        </block>
+      </view>
+      <view class="price">￥{{item.price}}</view>
+      <view class="withdraw-cash">
+        <text class="name">提现到</text>
+        <view class="types">
+          <block>
+            <image src="../../static/img/weixin-code.png" class="imgs" wx:if="{{item.card_id==0}}"></image>
+            <image src="../../static/img/bank-card-icon.png" class="img" wx:if="{{item.card_id>0}}"></image>
+          </block>
+          <text>{{item.type}}</text>
+        </view>
+      </view>
+      <view class="service">
+        <text class="name">服务费</text>
+        <text class="price">￥{{item.procedures}}</text>
+      </view>
+      <view class="time-wrap">
+        <text class="title">申请时间</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+      <view class="fail-wrap" wx:if="{{item.status==2}}">
+        <view class="title">失败原因</view>
+        <view class="content">
+          <block>
+            <view wx:if="{{item.reason}}">{{item.reason}}</view>
+            <view wx:else>提现失败</view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- 到底了 -->
+    <view class="pageEng" wx:if="{{is_stop}}">
+      哎呀，没有更多数据了~
+    </view>
+  </view>
+
+  <!-- 获取数据为空 -->
+  <view class="empty" wx:if="{{!getWithdrawal.length}}">
+    <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/06/9096f8d1ed60988ddfbebe5867e7297f.png">
+    </image>
+  </view>
+
+</view>

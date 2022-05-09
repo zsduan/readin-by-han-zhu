@@ -1,0 +1,53 @@
+<view class="page">
+    <view class="line"></view>
+    <!-- 银行卡列表 -->
+    <view class="list">
+        <view class="item" wx:for="{{bankList}}" wx:key="index" data-id="{{item.id}}" bindlongpress="openPup">
+            <view class="name">{{item.bank}}</view>
+            <view class="bottom" wx:if="{{item.id != -1}}">
+                <view class="left">储蓄卡</view>
+                <view class="right">
+                    <text class="right-text">****</text>
+                    <text class="right-text">****</text>
+                    <text class="right-text">****</text>
+                    <text class="num">{{item.num}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 添加银行卡 -->
+    <view class="add-bank" bindtap="goAddBank">
+        <view class="left">
+            <text class="add">+</text>
+            <text class="add-name">添加银行卡</text>
+        </view>
+        <view class="right">
+            <image src="../../static/img/row-right-index.png"></image>
+        </view>
+    </view>
+    <!-- 提示 -->
+    <view class="tips">
+        小提示：长按解除银行卡绑定
+    </view>
+    <!-- 弹窗 -->
+    <!-- <view class="pup-wrop" wx:if="{{is_pup}}" bindtap="cancel"> -->
+    <van-action-sheet bindtap="cancel" show="{{is_pup}}" class="pup-wrop">
+        <view class="pup">
+            <view class="item" catchtap="modifyBank">
+                <image src="../../static/img/edit.png"></image>
+                <text>编辑银行卡</text>
+            </view>
+            <view class="item" catchtap="delBank">
+                <image src="../../static/img/del.png"></image>
+                <text>解绑银行卡</text>
+            </view>
+            <view class="line"></view>
+            <view class="cancel" catchtap="cancel">取消</view>
+        </view>
+    </van-action-sheet>
+    <!-- </view> -->
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

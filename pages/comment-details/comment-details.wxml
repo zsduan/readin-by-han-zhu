@@ -1,0 +1,23 @@
+<view class="page">
+    <!-- 评论内容 -->
+    <block>
+        <comment-item commentList="{{commentList}}" book_id="{{book_id}}" is_show_top="{{is_show_top}}" bindreportId="getReportId" ></comment-item>
+    </block>
+    <!-- 举报弹窗 -->
+    <block>
+        <report report_id="{{report_id}}" is_pup="{{is_pup}}" binddelOk="delOk" report_user_id="{{comment_user_id}}" book_id="{{book_id}}"></report>
+    </block>
+    <!-- 发表评论 -->
+    <view class="publish" wx:if="{{is_show_top && !is_one}}">
+        <view class="wrop" bindtap="goComment">
+            <view class="ipt">
+                <input type="text" adjust-position="{{false}}" focus="{{is_focus}}" maxlength="-1" placeholder="{{placeholder_text}}" disabled />
+            </view>
+            <view class="btn" bindtap="send">评论</view>
+        </view>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

@@ -1,0 +1,259 @@
+@import "./user.skeleton.wxss";
+
+page {
+    background: #F6F6F6;
+}
+
+.userinfo {
+    display: flex;
+    position: relative;
+    padding: 0 40rpx;
+    background: #fff;
+}
+
+.userinfo .icon {
+    width: 120rpx;
+    height: 120rpx;
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/57e4321c15e799f43dc0fe7b0dfc093f.png");
+    background-size: 100% 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 30rpx;
+}
+
+.userinfo .icon image {
+    width: 100%;
+    height: 100%;
+}
+
+.userinfo .info {
+    padding-left: 30rpx;
+    padding-top: 60rpx;
+}
+
+.userinfo .info .nikename {
+    font-size: 34rpx;
+    font-family: Microsoft YaHei;
+    font-weight: bold;
+    color: #333333;
+}
+
+.userinfo .info .vip {
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.userinfo .info .num {
+    font-size: 30rpx;
+    color: #F16E22;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 10rpx;
+}
+
+.userinfo .info .bottom {
+    display: flex;
+    align-items: center;
+}
+
+.userinfo .renew {
+    display: inline-block;
+    width: 98rpx;
+    height: 34rpx;
+    border: 1px solid #FFD6BE;
+    border-radius: 26rpx;
+    font-size: 18rpx;
+    color: #F16E22;
+    text-align: center;
+    line-height: 34rpx;
+    margin-left: 37rpx;
+}
+
+.userinfo .sign {
+    position: absolute;
+    right: 0rpx;
+    font-size: 22rpx;
+    color: #333;
+    width: 137rpx;
+    height: 50rpx;
+    background: #fff;
+    box-shadow: 0rpx 3rpx 8rpx rgba(0, 0, 0, 0.1);
+    border-radius: 40rpx 0 0 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30rpx;
+}
+
+.userinfo .sign image {
+    width: 40rpx;
+    height: 30rpx;
+}
+
+
+.profitAndIntegral {
+    display: flex;
+    padding: 0 40rpx;
+    padding-top: 30rpx;
+    background: #fff;
+}
+
+.profitAndIntegral .item {
+    padding-right: 80rpx;
+    text-align: center;
+}
+
+.profitAndIntegral .item .num {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.open-vip {
+    height: 85rpx;
+    background: #fff;
+    padding: 0 40rpx;
+    padding-top: 30rpx;
+}
+
+.open-vip .back {
+    width: calc(100% - 340rpx);
+    height: calc(100% - 31rpx);
+    background: url("https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/Hiv0EdPqUTNp7v6iPe7uvdBBTPq667.png");
+    border-radius: 16rpx 16rpx 0rpx 0rpx;
+    font-size: 24rpx;
+    color: #fff;
+    padding-top: 31rpx;
+    background-size: 100% 100%;
+    padding-left: 340rpx;
+}
+
+.exclusive {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 20rpx 40rpx 35rpx 30rpx;
+    margin: 30rpx 30rpx;
+
+}
+
+.exclusive .title {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.exclusive .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.exclusive .list .item {
+    width: 25%;
+    text-align: center;
+    padding-top: 30rpx;
+    position: relative;
+}
+
+.exclusive .list .item .imgwrop {
+    width: 70rpx;
+    height: 70rpx;
+    margin: 0 auto;
+    margin-bottom: 21rpx;
+
+}
+
+.exclusive  button{
+    width: 50rpx;
+    height: 100rpx;
+    border: transparent;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.exclusive .list .item .name {
+    font-size: 24rpx;
+    color: #333333;
+}
+
+.exclusive .list .item image {
+    width: 100%;
+    height: 100%;
+}
+
+.pup-wrop .pup {
+    padding-top: 48rpx;
+    width: 548rpx;
+    height: calc(342rpx - 48rpx);
+    background: #FFFFFF;
+    /* border-radius: 20rpx; */
+}
+
+.pup-wrop .title {
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000000;
+}
+
+.pup-wrop .content {
+    border-bottom: #E5E5E5 1px solid;
+    margin: 0 47rpx;
+    padding-bottom: 10rpx;
+    padding-top: 55rpx;
+}
+
+.pup-wrop .bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: #E5E5E5 1px solid;
+    margin-top: 49rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.pup-wrop .bottom view {
+    width: 50%;
+    text-align: center;
+}
+
+.pup-wrop .bottom .cancel {
+    border-right: #E5E5E5 1px solid;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.pup-wrop .bottom .determine {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #FE7221;
+}
+
+.pup-serve{
+    height: auto !important;
+    padding: 30rpx;
+}
+
+.pup-wrop .contents{
+    padding: 20rpx;
+}
+
+.pup-serve .btns{
+    padding: 20rpx;
+    text-align: center;
+    /* border-bottom: 1px solid rgba(155, 155, 155, 0.3); */
+    color: #FE7221;
+    font-weight: bold;
+}
+
+.pup-serve .btns button{
+    color: #FE7221;
+    font-size: 30rpx;
+}
+
+.pup-serve .btns:last-child{
+    border-bottom: 0;
+    color: #999999;
+}

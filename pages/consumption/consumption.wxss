@@ -1,0 +1,99 @@
+page {
+    background: #F3F3F3;
+}
+
+.list {
+    padding: 0 40rpx;
+}
+
+.list .item {
+    margin: 30rpx 0;
+    padding: 20rpx 25rpx;
+    padding-bottom: 25rpx;
+    background: #fff;
+    border-radius: 12rpx;
+}
+
+.list .item .title {
+    font-size: 28rpx;
+    color: #666666;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.list .item .tips {
+    font-size: 24rpx;
+    color: #666666;
+    text-align: center;
+    padding-top: 60rpx;
+}
+
+.list .item .price {
+    font-size: 60rpx;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+}
+
+.list .item .price .icon {
+    display: inline-block;
+    padding-right: 20rpx;
+}
+
+.list .item .curriculum {
+    display: flex;
+    padding-top: 60rpx;
+}
+
+.list .item .curriculum .name {
+    font-size: 28rpx;
+    color: #666666;
+    padding-right: 20rpx;
+}
+
+.list .item .curriculum .curriculum-tips {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.list .item-item {
+    display: flex;
+    font-size: 28rpx;
+    color: #333333;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 36rpx;
+}
+
+.list .item-item:last-child {
+    padding-bottom: 0rpx;
+}
+.list .item-item .pay{
+    display: flex;
+    align-items: center;
+}
+.list .item-item .pay image {
+    width: 38rpx;
+    height: 31rpx;
+    
+}
+
+.list .item-item .pay text{
+    padding-left:10rpx;
+    display: inline-block;
+}
+
+.list .item-first {
+    padding-top: 60rpx;
+}
+
+.empty {
+    text-align: center;
+    padding-top: 282rpx;
+}
+
+.empty image {
+    width: 441rpx;
+}

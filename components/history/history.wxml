@@ -1,0 +1,32 @@
+<!-- 历史学习 -->
+<view class="history" wx:if="{{historyList.length}}">
+    <view class="history-title">
+        <text class="name {{fontSize ? 'name-active' : ''}}">历史学习</text>
+        <view class="more" bindtap="historyMore">
+            <text>更多</text>
+            <image src="../../static/img/row-right-index.png" class="img"></image>
+        </view>
+    </view>
+    <view class="content">
+        <scroll-view scroll-x="true" class="list">
+            <view class="item " data-id="{{item.id}}" wx:for="{{historyList}}" wx:key="index"
+                bindtap="historyCilck">
+                <view class="imgwrop fl">
+                    <image src="{{imgSrc}}{{item.thumb}}" class="img"></image>
+                </view>
+                <view class="right fr">
+                    <view class="name" wx:if="{{!item.p_title}}">{{item.title}}</view>
+                    <view class="name" wx:else>{{item.p_title}}_第{{item.episodes}}集</view>
+                    <view class="details" wx:if="{{!item.p_title}}">{{item.intro}}</view>
+                    <view class="details" wx:else>{{item.title}}</view>
+                    <view class="circle">
+                        <view class="floor">
+                            <view class="top" style="width : {{item.long}};"></view>
+                        </view>
+                        <view class="num">{{item.circle}}%</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

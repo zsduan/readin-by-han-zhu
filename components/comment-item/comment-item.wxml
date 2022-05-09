@@ -1,0 +1,75 @@
+<view class="comment-item">
+    <view wx:for="{{commentList}}" wx:key="index" wx:if="{{commentList.length}}">
+        <!-- 楼主头像 -->
+        <view class="user-info" bindtap="goRankingDetail" data-user_id="{{item.user_id}}">
+            <view class="user-icon">
+                <image src="{{item.avatar}}" class="img"></image>
+            </view>
+            <view class="right">
+                <view class="name">
+                    <text>{{item.nickname}}</text>
+                    <text class="top" wx:if="{{item.is_top}}">顶置</text>
+                    <text class="cream" wx:if="{{item.is_cream}}">加精</text>
+                </view>
+                <view class="time">{{item.time}}</view>
+            </view>
+        </view>
+        <view class="contents {{item.is_details ? 'contents-active' : ''}}">
+            <!-- 楼主 -->
+            <view class="mainContent">
+                <view class="text" wx:if="{{item.is_up}}" bindtap="goComment" data-building_id="{{item.comment_id}}"
+                    data-commentId="{{item.id}}">
+                    <text wx:if="{{item.reply_name}}">回复</text>
+                    <text class="user-id user-reply" wx:if="{{item.reply_name}}">@{{item.reply_name}}:</text>
+                    <text>{{item.content}}</text>
+                </view>
+                <view wx:else bindtap="goComment" data-building_id="{{item.comment_id}}" data-commentId="{{item.id}}">
+                    <text wx:if="{{item.reply_name}}">回复</text>
+                    <text class="user-id user-reply" wx:if="{{item.reply_name}}">@{{item.reply_name}}:</text>
+                    <text>{{item.content}}</text>
+                </view>
+                <view class="up" catchtap="upAndDwon" data-index="{{index}}" wx:if="{{item.wrods_num > 100}}">
+                    {{item.comment_text}}</view>
+                <view class="like-comments" wx:if="{{!item.is_one}}">
+                    <view class="like">
+                        <image src="../../static/img/link.png" class="img" data-index="{{index}}"
+                            data-commentId="{{item.id}}" wx:if="{{!likeList[index]}}" bindtap="likeComment"></image>
+                        <image src="../../static/img/link-active.png" class="img" data-commentId="{{item.id}}"
+                            data-index="{{index}}" wx:else bindtap="likeComment"></image>
+                        <view class="num">{{item.fabulous}}</view>
+                    </view>
+                    <view class="comments" bindtap="goComment" data-index="{{index}}" data-commentId="{{item.id}}"
+                        data-building_id="{{item.comment_id}}">
+                        <image src="../../static/img/comments.png" class="img"></image>
+                    </view>
+                    <view class="more" data-id="{{item.id}}" data-user_id="{{item.user_id}}" bindtap="openPup">
+                        <text class="spot"></text>
+                        <text class="spot"></text>
+                        <text class="spot"></text>
+                    </view>
+                </view>
+            </view>
+            <!-- 划线 -->
+            <view class="line" wx:if="{{item.is_details}}"></view>
+            <!-- 相关回复条数 -->
+            <view class="about-comment" wx:if="{{item.is_details}}">相关回复{{item.count}}条</view>
+            <!-- 底部评论 -->
+            <view class="reply" wx:if="{{item.comment.length}}" data-id="{{item.id}}" bindtap="goCommentDetails">
+                <view class="list">
+                    <view class="item" wx:for="{{item.comment}}" wx:key="index">
+                        <text class="user-id">{{item.nickname}}:</text>
+                        <text wx:if="{{item.reply_name}}">回复</text>
+                        <text class="user-id user-reply" wx:if="{{item.reply_name}}">@{{item.reply_name}}:</text>
+                        <text class="reply-content">{{item.content}}</text>
+                    </view>
+                </view>
+                <view class="sum-comment">共有{{item.comment_count}}回复>></view>
+            </view>
+        </view>
+    </view>
+    <view class="empty" wx:if="{{!commentList.length}}">
+        <image src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/06/14ec959aa1569694c3eccb2e624e35ba.png"
+            mode="widthFix" class="img">
+        </image>
+    </view>
+</view>

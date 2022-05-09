@@ -1,0 +1,71 @@
+page {
+    background: #F6F6F6;
+}
+
+.list {
+    margin-top: 20rpx;
+    background: #FFFFFF;
+    box-shadow: 0px 4rpx 10rpx rgba(0, 0, 0, 0.1);
+    border-radius: 40rpx 40rpx 0px 0px;
+    padding: 40rpx;
+}
+
+.list .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32rpx 0;
+    border-bottom: 1px solid #F2F2F2;
+}
+.list .item:last-child{
+    border-bottom: 0;
+}
+.list .item .left {
+    width: 90rpx;
+    height: 90rpx;
+    background: #ddd;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.list .item .left image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.list .item .right {
+    width: calc(100% - 120rpx);
+}
+
+
+.list .item .name {
+    font-size: 26rpx;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
+    display: inline-block;
+}
+
+.list .item .time {
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.list .item .spot {
+    width: 16rpx;
+    height: 16rpx;
+    background: #CF1515;
+    border-radius: 50%;
+    position: absolute;
+    right: -20rpx;
+    top: 0;
+}
+
+.empty {
+    text-align: center;
+    margin-top: 282rpx;
+}
+.empty image{
+    width: 441rpx;
+}
+

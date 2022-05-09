@@ -1,0 +1,79 @@
+<import src="ranking.skeleton.wxml" />
+
+<template is="skeleton" wx-if="{{!recordList.length}}" />
+
+<view class="page">
+    <view class="top-wrop">
+        <image src="../../static/img/ranking-top.png" mode="widthFix" class="back"></image>
+        <view class="icon" catchtap="goDetails" data-item="{{recordList[0].user_id}}">
+            <image src="{{recordList[0].avatar}}" mode="widthFix"></image>
+        </view>
+        <view class="title">{{recordList[0].nickname}}</view>
+        <view class="rules-wrop">
+            <view class="rules" bindtap="showTips">
+                <image src="../../static/paihang/tips.png"></image>
+                <text>排行规则</text>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <!-- 我的排行 -->
+        <view class="rank" wx:if="{{is_show_me && !is_show_none && user.num > 8}}">
+            <view class="ranking" wx:if="{{user.num < 31}}">{{user.num}}</view>
+            <view class="ranking" wx:else>30+</view>
+            <view class="icon" catchtap="goDetails" data-item="{{user.user_id}}">
+                <image src="{{user.avatar}}"></image>
+            </view>
+            <view class="name">{{user.nickname}}</view>
+            <view class="time">{{user.hour}}:{{user.minute}}:{{user.second}}</view>
+            <view class="is-like">
+                <view class="num">{{user.fabulous}}</view>
+                <view class="like" data-id="{{user.id}}" catchtap="fabulousRecord">
+                    <image src="../../static/img/link.png" wx:if="{{!user.is_fabulous}}"></image>
+                    <image src="../../static/img/link-active.png" wx:else></image>
+                </view>
+            </view>
+        </view>
+        <view class="rank-empty" wx:if="{{!is_show_me}}" bindtap="goLogin">
+            登录查看我的排名，点我登录
+        </view>
+        <view class="rank-empty" wx:if="{{is_show_me && is_show_none}}">
+            暂无排名，快去看书吧~
+        </view>
+        <!-- 表头 -->
+        <view class="header">
+            <view class="title">排名</view>
+            <view class="icon">头像</view>
+            <view class="nike-name">昵称</view>
+            <view class="time">学习时长</view>
+            <view class="like"></view>
+        </view>
+        <view
+            class="rank {{ index == 0 ? 'ranks-first' : ''}} {{index == 1 ? 'ranks-two' : ''}} {{index == 2 ? 'ranks-three' : ''}}"
+            wx:for="{{recordList}}" wx:key="index">
+            <view class="rank-line" wx:if="{{index < 3}}"></view>
+            <view class="ranking" wx:if="{{index > 2}}">{{item.num}}</view>
+            <view class="rank-top" wx:if="{{index < 3}}">
+                <image src="../../static/img/rank-1.png" wx:if="{{index == 0}}"></image>
+                <image src="../../static/img/rank-2.png" wx:if="{{index == 1}}"></image>
+                <image src="../../static/img/rank-3.png" wx:if="{{index == 2}}"></image>
+            </view>
+            <view class="icon">
+                <image src="{{item.avatar}}" lazy-load catchtap="goDetails" data-item="{{item.user_id}}"></image>
+            </view>
+            <view class="name">{{item.nickname}}</view>
+            <view class="time">{{item.hour}}:{{item.minute}}:{{item.second}}</view>
+            <view class="is-like">
+                <view class="num">{{item.fabulous}}</view>
+                <view class="like" data-id="{{item.id}}" catchtap="fabulousRecord">
+                    <image src="../../static/img/link.png" wx:if="{{!item.is_fabulous}}"></image>
+                    <image src="../../static/img/link-active.png" wx:else></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

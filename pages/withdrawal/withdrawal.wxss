@@ -1,0 +1,270 @@
+.header .not-empty {
+    padding: 60rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .row-right image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.header .title {
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.header .right {
+    width: calc(100% - 225rpx);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .right .top {
+    display: flex;
+    /* align-items: center; */
+}
+
+.header .right .top .text {
+    font-size: 30rpx;
+    color: #333333;
+    padding-left: 10rpx;
+}
+
+.header .right .bottom {
+    padding-left: 50rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+.header .right .imgwrop image {
+    width: 42rpx;
+    height: 26rpx;
+}
+.header .right .weixin-icon image {
+    width: 40rpx;
+    height: 30rpx;
+}
+
+.header .right .bank-icon image{
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.header .empty {
+    padding: 60rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .empty .left {
+    display: flex;
+    font-size: 30rpx;
+    color: #333333;
+    align-items: center;
+}
+
+.header .empty .left .title {
+    padding-left: 20rpx;
+    font-weight: bold;
+}
+
+.header .empty .left .add {
+    font-size: 60rpx;
+}
+
+.header .empty .right {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.header .empty .right image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.withdrawal {
+    background: #F6F6F6;
+    box-shadow: 0rpx -4rpx 8rpx rgba(0, 0, 0, 0.1);
+    border-radius: 40rpx 40rpx 0rpx 0rpx;
+    padding: 50rpx 60rpx;
+}
+
+.withdrawal .title {
+    font-size: 30rpx;
+    color: #333333;
+    padding-bottom: 75rpx;
+}
+
+.withdrawal .ipts {
+    display: flex;
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.withdrawal .ipts .icon {
+    font-size: 40rpx;
+    color: #333333;
+}
+
+.withdrawal .ipts .ipt {
+    padding-left: 20rpx;
+    font-size: 40rpx;
+}
+
+.withdrawal .money {
+    color: #333333;
+    font-size: 28rpx;
+    padding-top: 32rpx;
+}
+
+.withdrawal .btn {
+    color: #1A83CC;
+}
+
+.withdrawal .btns {
+    width: 400rpx;
+    height: 75rpx;
+    border: 2px solid #F16E22;
+    border-radius: 38rpx;
+    text-align: center;
+    line-height: 75rpx;
+    color: #F16E22;
+    font-size: 30rpx;
+    margin: 0 auto;
+    margin-top: 168rpx;
+}
+
+
+.pup-wrop .pup {
+    width: 550rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    padding: 20rpx 40rpx;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 0rpx; */
+}
+
+.pup-wrop .pup .item {
+    padding: 35rpx 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pup-wrop .pup .title-wrop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pup-wrop .pup .title-wrop .title {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #333333;
+}
+
+.pup-wrop .pup .title-wrop image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.pup-wrop .pup .top {
+    display: flex;
+    align-items: center;
+}
+
+.pup-wrop .pup .top .bank-name {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+.pup-wrop .pup .imgwrop {
+    width: 42rpx;
+    height: 26rpx;
+    margin-right: 21rpx;
+}
+
+.pup-wrop .pup .close-img{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.pup-wrop .pup .imgwrop image{
+    width: 100%;
+    height: 100%;
+}
+
+
+.pup-wrop .pup .weixin-icon{
+    width: 40rpx !important;
+    height: 30rpx !important;
+}
+
+.pup-wrop .pup .bank-icon{
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.pup-wrop .pup .right-icon{
+    padding-right: 23rpx;
+}
+.pup-wrop .pup .arrival {
+    margin-left: 61rpx;
+    font-size: 24rpx;
+    color: #999999;
+    padding-top: 5rpx;
+}
+
+.pup-wrop .pup .item radio {
+    transform: scale(0.7);
+}
+
+.pup-wrop .pup .item .right image {
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.pup-wrop .pup .item .left-add {
+    display: flex;
+    align-items: center;
+}
+
+.pup-wrop .pup .item .add {
+    font-size: 46rpx;
+}
+
+.pup-wrop .pup .item .left-add .title {
+    font-size: 28rpx;
+    color: #333333;
+    padding-left: 27rpx;
+}
+
+.bottom-tips{
+    position: fixed;
+    bottom: 40rpx;
+    width: 100%;
+    font-size: 30rpx;
+    color: #999;
+    text-align: center;
+    text-decoration:underline;
+}
+
+.pup-tips .title{
+    font-size: 30rpx;
+    padding: 0rpx 0rpx 20rpx 20rpx;
+    font-weight: bold;
+}
+
+.pup-tips{
+    width: 500rpx;
+    padding: 40rpx 20rpx;
+}
+
+.pup-tips .item{
+    font-size: 30rpx;
+    color: #999;
+    padding: 10rpx 20rpx;
+}

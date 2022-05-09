@@ -1,0 +1,79 @@
+<view class="page">
+    <!-- 顶部 -->
+    <view class="header">
+        <view class="top">
+            <view class="money">
+                <view>￥{{userInfo.balance}}</view>
+                <view class="name">我的收益</view>
+            </view>
+            <view class="reflect" bindtap="goWithdrawal">立即提现</view>
+        </view>
+        <view class="bottom">
+            <view class="left" bindtap="goWithdrawalRecord">
+                提现记录
+            </view>
+            <view bindtap="goBankList">
+                <text class="right">我的银行卡</text>
+                <image src="../../static/img/right-profit.png"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 我的收益 -->
+    <view class="my-profit" style="height : {{list_height ? list_height : ''}}px">
+        <view class="nav">
+            <view class="item {{item.active ? 'active':''}}" wx:for="{{navList}}" wx:key="index" data-index="{{index}}"
+                bindtap="changeTop">
+                {{item.name}}
+                <view class="line" wx:if="{{item.active}}"></view>
+            </view>
+        </view>
+        <view class="list">
+            <swiper style="height : {{list_height ? list_height-45 : ''}}px" current="{{changeTable}}"
+                bindchange="bindChange">
+                <!-- <block wx:for="{{navList}}"  wx:key="index"> -->
+                  <swiper-item>
+                    <view class="item" wx:for="{{moneyList}}" wx:key="index" wx:if="{{moneyList.length}}">
+                        <view class="left">
+                            <view class="title">{{item.reason}}</view>
+                            <view class="time">{{item.time}}</view>
+                        </view>
+                        <view class="right">
+                            <text class="up" wx:if="{{item.type}}">+{{item.balance}}</text>
+                            <text class="down" wx:else>-{{item.balance}}</text>
+                        </view>
+                    </view>
+                    <!-- 空 -->
+                    <view class="empty" wx:if="{{!moneyList.length}}">
+                        <image
+                            src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/q4CuP7pKTSxuF7P2p83g4xf47ujG7M.png">
+                        </image>
+                    </view>
+                </swiper-item>
+                <!-- </block> -->
+              
+                <swiper-item>
+                    <view class="item" wx:for="{{payList}}" wx:key="index" wx:if="{{payList.length}}">
+                        <view class="left">
+                            <view class="title">{{item.reason}}</view>
+                            <view class="time">{{item.time}}</view>
+                        </view>
+                        <view class="right">
+                            <text class="up" wx:if="{{item.type}}">+{{item.balance}}</text>
+                            <text class="down" wx:else>-{{item.balance}}</text>
+                        </view>
+                    </view>
+                    <!-- 空 -->
+                    <view class="empty" wx:if="{{!moneyList.length}}">
+                        <image
+                            src="https://hanzhudushu.oss-cn-chengdu.aliyuncs.com/images/5/2021/04/q4CuP7pKTSxuF7P2p83g4xf47ujG7M.png">
+                        </image>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

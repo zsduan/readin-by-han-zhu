@@ -1,0 +1,58 @@
+<view class="report-wrop" wx:if="{{is_pup}}">
+    <view class="pup" wx:if="{{is_show_bottom}}">
+        <van-action-sheet show="true" actions="{{actions}}" bind:close="cancel" bind:click-overlay="onClose">
+            <view class="item" catchtap="edit" wx:if="{{report_user_id == user_id && 0}}">
+                <image src="../../static/img/edit-details.png" class="img"></image>
+                <text class="text">编辑</text>
+            </view>
+            <view class="item"  catchtap="del" wx:if="{{report_user_id == user_id }}">
+                <image src="../../static/img/del-details.png" class="img"></image>
+                <text class="text">删除</text>
+            </view>
+            <view class="item" catchtap="report">
+                <image src="../../static/img/warning.png" class="img"></image>
+                <text class="text">举报</text>
+            </view>
+            <!-- <view class="line"></view> -->
+            <view class="cancel" catchtap="cancel">取消</view>
+        </van-action-sheet>
+    </view>
+
+    <!-- 选择举报理由 -->
+    <!-- <view class="pup-report" wx:if="{{is_report}}">
+        <view class="title">请选择举报理由</view>
+        <view class="list">
+            <view class="item" wx:for="{{reportList}}" wx:key="index" catchtap="reportRadio" data-index="{{index}}">
+                <radio color="#F16E22" checked="{{item.active}}" class="radio">
+                </radio>
+                <text class="title">{{item.title}}</text>
+            </view>
+            <view class="textarea" wx:if="{{is_text}}">
+                <textarea placeholder="请填写您举报的举报理由" bindinput="inputText" class="textareas"></textarea>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="cancel btn" catchtap="cancel" >取消</view>
+            <view class="determine btn" catchtap="startReporting">确定</view>
+        </view>
+    </view> -->
+
+    <van-popup show="{{is_report}}" bind:close="onClose" round="true" class="pup-report">  
+                <view class="title" >请选择举报理由</view>
+        <view class="list">
+            <view class="item" wx:for="{{reportList}}" wx:key="index" catchtap="reportRadio" data-index="{{index}}">
+                <radio color="#F16E22" checked="{{item.active}}" class="radio">
+                </radio>
+                <text class="title">{{item.title}}</text>
+            </view>
+            <view class="textarea" wx:if="{{is_text}}">
+                <textarea placeholder="请填写您举报的举报理由" bindinput="inputText" class="textareas"></textarea>
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="cancel btn" catchtap="cancel" >取消</view>
+            <view class="determine btn" catchtap="startReporting">确定</view>
+        </view>
+    </van-popup>  
+
+</view>

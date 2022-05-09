@@ -1,0 +1,66 @@
+<view class="page">
+    <view class="not-pup" wx:if="{{!is_pup}}">
+        <view class="banner">
+            <swiper previous-margin="37rpx" next-margin="37rpx" current="1" circular bindchange="bannerChange">
+                <swiper-item class="swiper-item {{item.active ? 'swiper-active' : ''}}" wx:for="{{bannerList}}"
+                    wx:key="index" wx:if="{{item.is_show}}">
+                    <view class="imgwrop {{item.active ? 'imgwrop-active' : ''}}">
+                        <image src="{{item.share_url}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="sport-wrop">
+                <view class="item {{item.active ? 'active' : ''}}" wx:for="{{bannerList}}" wx:key="index"></view>
+            </view>
+        </view>
+        <view class="details">
+            让一亿人爱上读书和思考
+        </view>
+        <view class="en-details">
+            <view>Let 100 million people fall</view>
+            <view>in love with reading</view>
+        </view>
+        <view class="btns">
+            <view class="btn-wrop">
+                <view class="btn btn-save" bindtap="addWx">
+                    <image src="../../static/img/save-inv.png" class="save"></image>
+                    <text>保存图片</text>
+                </view>
+            </view>
+            <view class="btn-wrop">
+                <view class="btn btn-share">
+                    <image src="../../static/img/share-inv.png" class="share"></image>
+                    <text>分享好友</text>
+                </view>
+                <button open-type="share">分享好友</button>
+            </view>
+        </view>
+    </view>
+    <view class="pup-wrop" wx:else>
+        <view class="top-img">
+            <image src="{{pupImg}}" mode="widthFix"></image>
+        </view>
+        <view class="bottom-wrop-pup">
+            <view class="btns-pup">
+                <view class="btn-wrop">
+                    <view class="btn btn-save" bindtap="addWx">
+                        <image src="../../static/img/save-inv.png" class="save"></image>
+                        <text>保存图片</text>
+                    </view>
+                </view>
+                <view class="btn-wrop">
+                    <view class="btn btn-share">
+                        <image src="../../static/img/share-inv.png" class="share"></image>
+                        <text>分享好友</text>
+                    </view>
+                    <button open-type="share">分享好友</button>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

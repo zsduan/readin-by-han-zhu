@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "paly-bottom" : "/components/paly-bottom/paly-bottom",
+    "history" : "/components/history/history",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTitleText" : "韩朱读书",
+  "enablePullDownRefresh": true
+}

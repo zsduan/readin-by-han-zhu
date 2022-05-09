@@ -1,0 +1,126 @@
+<view class="page" wx:if="{{is_show_all}}">
+    <!-- canvans -->
+    <view class="canvas-wrop-wrop" wx:if="{{is_show_canvas}}">
+        <view class="canvas-wrop">
+            <view class="canvas-close" bindtap="closeCanvas">
+                <image src="../../static/img/close-share.png"></image>
+            </view>
+            <view class="canvas-top">
+                <canvas canvas-id="myCanvas" id="myCanvas" style="{{canvansStyle}}"></canvas>
+            </view>
+            <view class="canvas-btns">
+                <view class="btn-wrop">
+                    <view class="btn" bindtap="saveImg">
+                        <view class="imgWrop">
+                            <image src="../../static/img/save-share.png"></image>
+                        </view>
+                        <view>保存图片</view>
+                    </view>
+                </view>
+                <view class="btn-wrop">
+                    <view class="btn btn-share">
+                        <view class="imgWrop">
+                            <image src="../../static/img/link-share.png"></image>
+                        </view>
+                        <view>分享链接</view>
+                        <button open-type="share">分享</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 编辑页面 -->
+    <view class="top-wrop {{is_show_pup ? 'top-wrop-active':''}}">
+        <view class="back">
+            <image src="{{imgList.back}}" mode="widthFix" data-index="back" bindload="imgOnload" wx:if="{{backHeight >= 441}}"></image>
+            <image src="{{imgList.back}}" data-index="back" bindload="imgOnload" wx:else></image>
+        </view>
+        <view class="icon">
+            <image src="{{userInfo.avatar}}" data-index="icon" bindload="imgOnload"></image>
+        </view>
+        <view class="username">{{userInfo.nickname}}</view>
+        <view class="date">{{date.date}}</view>
+        <view class="rank">{{ranking}}</view>
+        <view class="rank-title">本周排名</view>
+        <view class="read">{{readingTime_wxml}}</view>
+        <view class="read-title">阅读时长</view>
+        <view class="read-title">超过{{exceed}}的用户</view>
+        <view class="tips" style="color:{{fontColor}};">{{tips}}</view>
+        <view class="logo">
+            <image src="{{imgList.logo}}" data-index="logo" bindload="imgOnload"></image>
+        </view>
+        <view class="code">
+            <image src="{{imgList.code}}" data-index="code" bindload="imgOnload"></image>
+        </view>
+        <view class="edit" wx:if="{{!is_show_pup}}" bindtap="edit">
+            <image src="../../static/img/edit-share.png"></image>
+        </view>
+    </view>
+    <!-- 生成图片与返回首页 -->
+    <view class="save-share">
+        <view class="btn-wrop">
+            <view class="btn btn-home" bindtap="goHome">
+                <image src="../../static/img/home-share.png" class="home" bindtap="goHome"></image>
+                <text>返回首页</text>
+            </view>
+        </view>
+        <view class="btn-wrop">
+            <view class="btn btn-save" bindtap="drowStrat">
+                <image src="../../static/img/save-inv.png" class="save"></image>
+                <text>生成图片</text>
+            </view>
+        </view>
+    </view>
+    <!-- 底部提示 -->
+    <view class="tips-wrop">
+        <view class="title">温馨提示：</view>
+        <view>1、为保证图片展示效果，请选择大小合适的图片；</view>
+        <view>2、点击图片右上角编辑，可自定义图片和文案；</view>
+        <view>3、以上数据均为本周截止当前时间数据；</view>
+        <view>4、所有数据每周一0点清零刷新。</view>
+    </view>
+
+    <!-- 弹窗 -->
+    <view class="pup">
+        <van-popup show="{{ is_show_pup }}" position="bottom" bind:close="closePup" overlay="{{false}}"
+            custom-style="height: 40%">
+            <view class="close-save">
+                <view class="close" bindtap="closePup">
+                    <image src="../../static/img/close.png"></image>
+                </view>
+                <view class="complete" bindtap="complete">完成</view>
+            </view>
+            <view class="title title-top">背景</view>
+            <scroll-view scroll-x="true" class="scroll">
+                <view class="item add" bindtap="updataImg">
+                    <image src="../../static/img/add-share.png"></image>
+                </view>
+                <view class="item {{item.active ? 'border' : ''}}" wx:for="{{backList}}" wx:key="index" data-index="{{index}}" bindtap="changeBack" >
+                    <image src="{{item.url}}"></image>
+                </view>
+            </scroll-view>
+            <view class="title">文字</view>
+            <view class="textarea">
+                <textarea maxlength="24" placeholder="请输入你的心情，最多24字" bindinput="textInput"
+                    value="{{tipsValue}}"></textarea>
+                <view class="font-num">{{fontNum}}/24</view>
+            </view>
+            <view class="title">请选择字体颜色</view>
+            <view bindtap="toggleColorPicker">
+                <view class="font-color" style="background:{{colorData.pickerData.hex}}"></view>
+            </view>
+        </van-popup>
+    </view>
+    <!-- 颜色选择器 -->
+    <view class="container color-picker-demo" wx:if="{{showColorPicker}}">
+        <view class="mask" bindtap="closeColorPicker"></view>
+        <view class="wrapper wrapper-absolute">
+            <view class="color-picker-wrapper" wx:if="{{showColorPicker}}">
+                <color-picker class="color-picker" colorData="{{colorData}}" rpxRatio="{{rpxRatio}}"
+                    bindchangecolor="onChangeColor"></color-picker>
+            </view>
+        </view>
+        <text class="color-tips">点击任意空白处关闭颜色选择弹窗</text>
+    </view>
+</view>

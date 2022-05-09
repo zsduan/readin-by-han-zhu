@@ -1,0 +1,40 @@
+<view class="page" wx:if="{{is_show}}">
+    <view class="top-wrop">
+        <view class="userInfo" wx:if="{{is_comment && !is_edit}}">
+            <text>回复</text>
+            <text class="nikename"> @{{userInfo.nickname}}</text>
+        </view>
+        <view class="title" wx:if="{{!is_comment}}">评论《{{bookDetails.title}}》</view>
+        <view class="title" wx:if="{{is_edit}}">正在编辑评论</view>
+        <view class="btns" bindtap="send">发布</view>
+    </view>
+    <view class="content">
+        <textarea maxlength="-1" placeholder="谈谈你对这本书的感受吧~" bindfocus="bindFocus" bindblur="clearFocus"
+            bindinput="bindKeyInput" value="{{content_text}}"></textarea>
+    </view>
+    <view class="bottom-wrops" style="bottom:{{keyHeigth}}rpx">
+        <view class="tips">温馨提示，小程序支持表情输入啦~~</view>
+        <view class="bottom-wrop"  wx:if="{{is_comment && !is_edit}}"
+            bindtap="goOneDetails">
+            <view class="left">
+                <view class="top">
+                    <view class="icon">
+                        <image src="{{userInfo.avatar}}"></image>
+                    </view>
+                    <view class="nikename">{{userInfo.nickname}}</view>
+                </view>
+                <view class="bottom">
+                    {{userInfo.content}}
+                </view>
+            </view>
+            <view class="right">
+                <image src="/static/img/row-dwon.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <!-- 底部播放 -->
+    <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+        <paly-bottom></paly-bottom>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTitleText" : "银行卡列表",
+  "enablePullDownRefresh": true
+}

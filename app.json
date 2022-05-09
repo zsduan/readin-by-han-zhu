@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/withdrawal/withdrawal",
+    "pages/details/details",
+    "pages/setting/setting",
+    "pages/share-img/share-img",
+    "pages/web-url/web-url",
+    "pages/consumption/consumption",
+    "pages/curriculum/curriculum",
+    "pages/ranking/ranking",
+    "pages/vip-details/vip-details",
+    "pages/comment-details/comment-details",
+    "pages/comment/comment",
+    "pages/user/user",
+    "pages/invitation/invitation",
+    "pages/integral/integral",
+    "pages/gift-card/gift-card",
+    "pages/feedback/feedback",
+    "pages/profit/profit",
+    "pages/userInfo/userInfo",
+    "pages/bank-list/bank-list",
+    "pages/my-student/my-student",
+    "pages/bind-tel/bind-tel",
+    "pages/add-bank/add-bank",
+    "pages/system-information/system-information",
+    "pages/msg-details/msg-details",
+    "pages/collection/collection",
+    "pages/search/search",
+    "pages/history-learning/history-learning",
+    "pages/logs/logs",
+    "pages/regulation/regulation",
+    "pages/withdrawal-record/withdrawal-record",
+    "pages/ranking-detail/ranking-detail"
+  ],
+  "subpackages": [
+    {
+      "root": "page-two",
+      "pages": [
+        "login/login"
+      ]
+    },{
+      "root": "page-three",
+      "pages": [
+        "404/404",
+        "500/500",
+        "error/error"
+      ]
+    }
+  ],
+  "plugins": {},
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "韩朱读书",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "paly-bottom": "/components/paly-bottom/paly-bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#F16E22",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabar-img/tabar-1.png",
+        "selectedIconPath": "static/tabar-img/tabar-1-active.png"
+      },
+      {
+        "text": "排行榜",
+        "pagePath": "pages/ranking/ranking",
+        "iconPath": "static/tabar-img/tabar-2.png",
+        "selectedIconPath": "static/tabar-img/tabar-2-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/user/user",
+        "iconPath": "static/tabar-img/tabar-3.png",
+        "selectedIconPath": "static/tabar-img/tabar-3-active.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+<view wx:if="{{bookList.length}}">
+    <view class="book-item" data-classId="{{item.id}}" wx:for="{{bookList}}" wx:key="index" bindtap="goDetails">
+        <view class="left">
+            <image src="{{imgSrc}}{{item.thumb}}" class="image" lazy-load wx:if="{{item.thumb}}"></image>
+        </view>
+        <view class="right">
+            <view class="name">
+                <view class="title" wx:if="{{item.p_title}}">{{item.p_title}}_第{{item.episodes}}集</view>
+                <view class="title" wx:else>{{item.title}}</view>
+                <view class="name-img" wx:if="{{collect}}" data-classId="{{item.id}}" catchtap="setCollect">
+                    <image src="../../static/img/collection.png" class="img" wx:if="{{item.collect}}" bindtap="setCollect">
+                        </image>
+                        <image src="../../static/img/collection-active.png" class="img" wx:else bindtap="setCollect"></image>
+                </view>
+            </view>
+            <view class="author">{{item.author}}</view>
+            <view class="details" wx:if="{{!item.p_title}}">{{item.intro}}</view>
+            <view class="details" wx:else>{{item.title}}</view>
+            <view class="read-time" wx:if="{{time}}">
+                <view class="read">
+                    <image src="../../static/img/paly-index.png" class="img"></image>
+                    <text class="reading">{{item.listening}}</text>
+                </view>
+                <view class="time">{{item.time}}</view>
+            </view>
+            <view class="circle" wx:if="{{speed}}">
+              <view class="floor">
+                <view class="top" style="width : {{item.long}};"></view>
+              </view>
+              <view class="num" wx:if="{{item.frequency == 0}}">{{item.circle}}%</view>
+              <view class="num" wx:else>已学{{item.frequency}}遍</view>
+            </view>
+        </view>
+    </view>
+</view>

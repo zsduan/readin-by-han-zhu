@@ -1,0 +1,50 @@
+.book-details {
+    text-align: center;
+    padding: 0 40rpx;
+    padding-top: 50rpx;
+}
+
+.book-details-height {
+    max-height: 1000rpx;
+    overflow: hidden;
+}
+
+.book-details .title {
+    font-size: 42rpx;
+    font-weight: bold;
+    color: #FE7221;
+}
+
+.book-details .understand {
+    font-size: 34rpx;
+    color: #333333;
+    padding-top: 23rpx;
+}
+
+.book-details .comment {
+    font-size: 34rpx;
+    color: #999999;
+    padding-top: 17rpx;
+}
+
+.open-all {
+    padding-top: 60rpx;
+    font-size: 30rpx;
+    color: #FE7221;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open-all .imgwrop{
+    padding-left: 15rpx;
+}
+.open-all .img {
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.open-all-active{
+    transform: rotate(180deg);
+    margin-left: 15rpx;
+    margin-top: 12rpx;
+}

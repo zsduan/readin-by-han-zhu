@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="textarea">
+        <textarea placeholder="请在这里写您在使用过程遇见的问题" bindinput="inputValue"></textarea>
+    </view>
+    <view class="tips">
+        **请优先选择联系客服，本功能不能保证时效性
+    </view>
+    <view class="journal">
+        <!-- <radio></radio> -->
+        <!-- <text>上传日志</text> -->
+    </view>
+    <view class="btns" bindtap="setFeedback">
+        提交
+    </view>
+</view>

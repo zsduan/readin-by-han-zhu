@@ -1,0 +1,18 @@
+<view class="page">
+    <!-- 书籍详情 -->
+    <view class="book-details">
+        <view class="title">互动话题</view>
+        <view class="understand" wx:if="{{bookDetails.p_title}}">说说你对《{{bookDetails.p_title}}》_第{{episodes}}集的理解</view>
+        <view class="understand" wx:else>说说你对《{{bookDetails.title}}》的理解</view>
+        <view class="comment">欢迎在评论区留言...</view>
+        <view class="{{is_all ? '':'book-details-height'}}">
+            <rich-text space="{{true}}" nodes="{{bookDetails.content}}"></rich-text>
+        </view>
+        <view bindtap="openAll" class="open-all">
+            <view>{{down_text}}</view>
+            <view class="imgwrop {{is_all ? 'open-all-active':''}}">
+                <image src="../../static/img/dwon-select-info.png" class="img"></image>
+            </view>
+        </view>
+    </view>
+</view>

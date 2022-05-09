@@ -1,0 +1,170 @@
+<!--index.wxml-->
+<import src="../index/index.skeleton.wxml"></import>
+<template is="skeleton" wx:if="{{!bannerList.length}}"></template>
+<view class="page {{is_pup_wrop ? 'page-wrop' : ''}}">
+  <!-- 搜索栏 -->
+  <view class="search" bindtap="goSearch">
+    <input type="text" placeholder="{{ bookHotSearch}}" bindinput="bindKeyInput" bindconfirm="search"
+      value="{{searValue}}" disabled="{{true}}" />
+    <view class="searBtn" bindtap="search">
+      <image src="../../static/img/search.png"></image>
+    </view>
+  </view>
+  <!-- nav -->
+  <view class="nav {{is_fixed ? 'nav-top':''}}" wx:if="{{navList.length}}">
+    <view class="transverse">
+      <scroll-view scroll-x="true" class="list" scroll-left="{{navLeft}}">
+        <view class="item {{item.active == 1 ? 'active-item': ''}}" data-index="{{index}}" wx:for="{{navList}}"
+          wx:key="index" bindtap="changeNav" data-length="{{navList.length}}">
+          <text>{{item.name}}</text>
+          <view class="active-wrop" wx:if="{{item.active}}">
+            <view class="active"></view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="down-selct">
+        <image src="../../static/img/down-selct-index.png" bindtap="openNav"></image>
+      </view>
+    </view>
+    <!-- <view class="open-wrop" wx:if="{{is_open}}" bindtap="closeNav"> -->
+    <van-popup show="{{is_open}}" class="open-wrop"  custom-style="border-radius:0 0 10px 10px;" bindtap="closeNav" position="top">
+      <view class="open">
+        <view class="title">
+          <view class="name">选择分类</view>
+          <view class="imgwrop" catchtap="closeNav">
+            <image src="../../static/img/down-selct-index.png" mode="widthFix"></image>
+          </view>
+        </view>
+        <view class="open-list">
+          <view class="item {{item.active? 'active':''}}" data-index="{{index}}" wx:for="{{navList}}" wx:key="index"
+            bindtap="changeNav">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </van-popup>
+    <!-- </view> -->
+  </view>
+  <swiper style="height:{{scrollHeight ? scrollHeight : '560'}}px;" bindchange="bannerIndexChange" current="{{current}}"
+    class=" {{is_fixed ? 'banner-top':''}}">
+    <swiper-item wx:for="{{navList}}" wx:key="index" wx:if="{{index == 0}}">
+      <view class="list-item">
+        <!-- banner -->
+        <view class="banner">
+          <swiper autoplay="true" interval="3000" circular="true" previous-margin="20rpx" next-margin="20rpx"
+            class="banner-wrop">
+            <swiper-item class="item" wx:for="{{bannerList}}" data-index="{{index}}" wx:key="index" bindtap="goDetails">
+              <view class="imgwrop">
+                <image src="{{imgSrc}}{{item.img}}" wx:if="{{item.img}}"></image>
+              </view>
+            </swiper-item>
+          </swiper>
+        </view>
+        <!-- 通知 -->
+        <view class="notice" wx:if="{{noticeTips.title}}" data-id="{{noticeTips.id}}" bindtap="goMsg">
+          <view class="imgwrop">
+            <image src="../../static/img/notice.png"></image>
+          </view>
+          <view class="right">
+            <van-notice-bar text="{{noticeTips.title}}" color="#333" background="#fff" custom-class="van-notice"
+              speed="{{20}}" />
+          </view>
+        </view>
+        <!-- 本周上新 -->
+        <view class="new-week" wx:if="{{weekData.id}}">
+          <view class="title">本周上新</view>
+          <view class="bottom" data-classId="{{weekData.id}}" bindtap="newWeekClick">
+            <view class="left {{show_back_img.week_img ?'left-back':''}}">
+              <image src="{{imgSrc}}{{weekData.new_thumb}}" lazy-load wx:if="{{weekData.thumb}}" bindload="closeBackImg"
+                data-name="week_img"></image>
+            </view>
+            <view class="right">
+              <view class="name">{{weekData.title}}</view>
+              <view class="author">{{weekData.author}}</view>
+              <view class="read">
+                <image src="../../static/img/paly-index.png"></image>
+                <text class="reading">{{weekData.listening}}</text>
+              </view>
+              <view class="details">{{weekData.intro}}</view>
+              <view class="reate" wx:if="{{weekData.title.length < 8}}">
+                <van-rate value="5" size="{{ 18 }}" color="#F9B326" void-color="#eee" void-icon="star" readonly />
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 历史学习 -->
+        <view class="history-list" wx:if="{{historyList.length}}">
+          <history historyList="{{historyList}}"></history>
+        </view>
+        <!-- 热门推荐 -->
+        <block>
+          <hot-recommend hotList="{{hotList}}" hotBottom="{{hotBottom}}"></hot-recommend>
+        </block>
+        <!-- 分割线 -->
+        <view class="lines">
+          <view class="line-20"></view>
+        </view>
+        <!-- 分类推荐样式 -->
+        <block>
+          <recommend-index typeList="{{typeList}}" bindtypeMore="typeMore"></recommend-index>
+        </block>
+        <view class="pageEng">
+          哎呀，没有更多数据了~
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item wx:for="{{navList}}" wx:key="index" wx:if="{{index != 0}}">
+      <view class="list-items">
+        <!-- 分类热门推荐 -->
+        <block wx:if="{{hotList.length > 3}}">
+          <view class="hot-recommend">
+            <hot-recommend hotList="{{hotList}}" hotBottom="{{hotBottom}}" title="{{title}}"
+              is_curriculum="{{is_curriculum}}"></hot-recommend>
+          </view>
+        </block>
+        <!-- 分割线 -->
+        <view class="line-20" wx:if="{{hotList.length > 3}}"></view>
+        <!-- 更多推荐 -->
+        <view class="more-recommend">
+          <view class="title">
+            <text>{{title}}</text>
+          </view>
+          <book-item bookList="{{bookList}}" time="{{true}}" is_curriculum="{{is_curriculum}}"></book-item>
+        </view>
+        <!-- 到底了 -->
+        <view class="pageEng" wx:if="{{is_stop || bookList.length < 10}}">
+          哎呀，没有更多数据了~
+        </view>
+        <view class="pageEng" wx:else>
+          下拉加载更多
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 底部播放 -->
+  <view class="bottom-play" wx:if="{{is_bootom_paly}}">
+    <paly-bottom></paly-bottom>
+  </view>
+  <!-- 首页会员弹窗 -->
+  <block>
+    <view wx:if="{{is_show_pup}}">
+      <member-pup is_show_pup="{{is_show_pup}}" pupData="{{pupData}}" bindclosePup="closePup"></member-pup>
+    </view>
+  </block>
+  <!-- 推送弹窗 -->
+  <view class="push-pup" wx:if="{{show_push}}" bindtap="closePushPup">
+    <view class="tips" wx:if="{{show_push_tips}}">
+      <image src="../../static/img/close-push.png" catchtap="closePushPup" class="pup-close"></image>
+      <image src="{{imgSrc}}images/5/2021/06/9d4ba5fcf2b722c497ca98cc2cf12652.png"></image>
+    </view>
+    <view wx:else>
+      <view class="close" catchtap="closePushPup" data-id="big">
+        <image src="../../static/img/close-push.png"></image>
+      </view>
+      <view class="back">
+        <view class="btn" catchtap="openPush">立即开启</view>
+        <view class="no-btn" catchtap="closePushPup">暂不开启</view>
+      </view>
+    </view>
+  </view>
+</view>

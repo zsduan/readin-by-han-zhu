@@ -1,0 +1,10 @@
+<view class="page">
+    <view class="wrop" >
+        <image src="../static/img/error.png"></image>
+        <view class="errMsg">
+            <view>错误代码：{{errMsg}}</view>
+        </view>
+        <view class="btn" bindtap="goHome">点击刷新</view>
+        
+    </view>
+</view>
